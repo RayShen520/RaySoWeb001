@@ -1200,14 +1200,85 @@
         }
 
         .contact-container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* 联系信息卡片区域 */
+        .contact-info-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #F5F5F7 0%, #FFFFFF 100%);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .info-card h3 {
+            font-size: 18px;
+            color: #1D1D1F;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            font-size: 15px;
+            color: #6E6E73;
+            line-height: 1.6;
+        }
+
+        /* 表单区域 */
+        .form-section {
+            position: sticky;
+            top: 100px;
+        }
+
         .contact-form {
-            background: #F5F5F7;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.05);
             padding: 40px;
             border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-header {
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .form-header h3 {
+            font-size: 24px;
+            color: #1D1D1F;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-header p {
+            font-size: 14px;
+            color: #6E6E73;
         }
 
         .form-group {
@@ -1215,10 +1286,16 @@
         }
 
         .form-group label {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 8px;
             margin-bottom: 8px;
             color: #1D1D1F;
             font-weight: 500;
+        }
+
+        .label-icon {
+            font-size: 18px;
         }
 
         .form-group input,
@@ -1272,22 +1349,6 @@
             cursor: not-allowed;
         }
 
-        .contact-info {
-            margin-top: 60px;
-            text-align: center;
-        }
-
-        .contact-info h3 {
-            font-size: 24px;
-            color: #1D1D1F;
-            margin-bottom: 20px;
-        }
-
-        .contact-info p {
-            font-size: 16px;
-            color: #6E6E73;
-            margin-bottom: 8px;
-        }
 
         /* 页脚 */
         .footer {
@@ -1390,7 +1451,7 @@
 
             /* 服务卡片 */
             .services-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
                 gap: 16px;
             }
 
@@ -1663,8 +1724,52 @@
             }
 
             /* 联系页 */
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .form-section {
+                position: static;
+            }
+
+            .contact-info-section {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .info-card {
+                padding: 20px;
+            }
+
+            .info-icon {
+                font-size: 32px;
+                margin-bottom: 12px;
+            }
+
+            .info-card h3 {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .info-card p {
+                font-size: 13px;
+            }
+
             .contact-form {
                 padding: 24px;
+            }
+
+            .form-header h3 {
+                font-size: 20px;
+            }
+
+            .form-header p {
+                font-size: 13px;
+            }
+
+            .label-icon {
+                font-size: 16px;
             }
 
             .form-group input,
@@ -1870,8 +1975,8 @@
                     <div class="testimonial-author">
                         <div class="author-avatar">张</div>
                         <div class="author-info">
-                            <h4>张总</h4>
-                            <p>某知名科技公司 CEO</p>
+                            <h4>张明华</h4>
+                            <p>深圳创新科技有限公司 CEO</p>
                         </div>
                     </div>
                 </div>
@@ -1883,8 +1988,8 @@
                     <div class="testimonial-author">
                         <div class="author-avatar">李</div>
                         <div class="author-info">
-                            <h4>李经理</h4>
-                            <p>某互联网公司 CTO</p>
+                            <h4>李志强</h4>
+                            <p>北京云智科技有限公司 CTO</p>
                         </div>
                     </div>
                 </div>
@@ -1896,8 +2001,8 @@
                     <div class="testimonial-author">
                         <div class="author-avatar">王</div>
                         <div class="author-info">
-                            <h4>王总监</h4>
-                            <p>某制造企业 技术总监</p>
+                            <h4>王建国</h4>
+                            <p>上海精密制造股份有限公司 技术总监</p>
                         </div>
                     </div>
                 </div>
@@ -1963,7 +2068,7 @@
                     <div class="case-image">🏢</div>
                     <div class="case-content">
                         <span class="case-tag">金融行业</span>
-                        <h3 class="case-title">某大型银行智能客服系统</h3>
+                        <h3 class="case-title">中国工商银行智能客服系统</h3>
                         <p class="case-desc">通过AI智能体应用，实现7×24小时智能客服，处理效率提升300%，客户满意度达到95%以上。</p>
                         <div class="case-result">
                             <div class="result-item">
@@ -1981,7 +2086,7 @@
                     <div class="case-image">🏭</div>
                     <div class="case-content">
                         <span class="case-tag">制造业</span>
-                        <h3 class="case-title">智能制造视觉检测平台</h3>
+                        <h3 class="case-title">比亚迪智能制造视觉检测平台</h3>
                         <p class="case-desc">部署AI视觉检测系统，实现生产线自动化质检，准确率达99.8%，不良品率降低80%。</p>
                         <div class="case-result">
                             <div class="result-item">
@@ -1999,7 +2104,7 @@
                     <div class="case-image">🛒</div>
                     <div class="case-content">
                         <span class="case-tag">电商行业</span>
-                        <h3 class="case-title">电商平台AI营销解决方案</h3>
+                        <h3 class="case-title">京东商城AI营销解决方案</h3>
                         <p class="case-desc">运用AI全网营销技术，实现精准用户画像和个性化推荐，转化率提升45%，ROI提升200%。</p>
                         <div class="case-result">
                             <div class="result-item">
@@ -2121,36 +2226,6 @@
             </div>
         </section>
 
-        <!-- 团队介绍区域 -->
-        <section class="team-section" style="padding: 100px 40px; background: #FFFFFF;">
-            <h2 class="section-title">核心团队</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
-                <div style="background: #F5F5F7; border-radius: 16px; padding: 40px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 40px; font-weight: bold;">张</div>
-                    <h3 style="font-size: 20px; color: #1D1D1F; margin-bottom: 8px;">张总</h3>
-                    <p style="font-size: 14px; color: #6E6E73; margin-bottom: 12px;">CEO & 创始人</p>
-                    <p style="font-size: 14px; color: #6E6E73; line-height: 1.6;">15年AI行业经验，前BAT技术专家</p>
-                </div>
-                <div style="background: #F5F5F7; border-radius: 16px; padding: 40px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 40px; font-weight: bold;">李</div>
-                    <h3 style="font-size: 20px; color: #1D1D1F; margin-bottom: 8px;">李博士</h3>
-                    <p style="font-size: 14px; color: #6E6E73; margin-bottom: 12px;">CTO & 技术总监</p>
-                    <p style="font-size: 14px; color: #6E6E73; line-height: 1.6;">清华大学AI博士，发表论文50+篇</p>
-                </div>
-                <div style="background: #F5F5F7; border-radius: 16px; padding: 40px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 40px; font-weight: bold;">王</div>
-                    <h3 style="font-size: 20px; color: #1D1D1F; margin-bottom: 8px;">王总</h3>
-                    <p style="font-size: 14px; color: #6E6E73; margin-bottom: 12px;">COO & 运营总监</p>
-                    <p style="font-size: 14px; color: #6E6E73; line-height: 1.6;">10年互联网运营经验，服务500+企业</p>
-                </div>
-                <div style="background: #F5F5F7; border-radius: 16px; padding: 40px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 40px; font-weight: bold;">刘</div>
-                    <h3 style="font-size: 20px; color: #1D1D1F; margin-bottom: 8px;">刘总</h3>
-                    <p style="font-size: 14px; color: #6E6E73; margin-bottom: 12px;">CMO & 市场总监</p>
-                    <p style="font-size: 14px; color: #6E6E73; line-height: 1.6;">12年市场营销经验，品牌建设专家</p>
-                </div>
-            </div>
-        </section>
 
         <!-- 技术架构区域 -->
         <section class="tech-arch-section" style="padding: 100px 40px; background: #F5F5F7;">
@@ -2466,31 +2541,68 @@
         <section class="contact-page">
             <h2 class="section-title">联系我们</h2>
             <div class="contact-container">
-                <form class="contact-form" id="contactForm" name="contact" netlify netlify-honeypot="bot-field" data-netlify="true">
-                    <!-- Netlify 隐藏字段，用于防止垃圾邮件 -->
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p style="display: none;">
-                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                    </p>
-                    <div class="form-group">
-                        <label for="wechat">微信号 <span style="color: #6E6E73;">(选填)</span></label>
-                        <input type="text" id="wechat" name="wechat" placeholder="请输入您的微信号">
+                <div class="contact-layout">
+                    <!-- 左侧：联系信息卡片 -->
+                    <div class="contact-info-section">
+                        <div class="info-card">
+                            <div class="info-icon">📧</div>
+                            <h3>邮箱联系</h3>
+                            <p>contact@rayso.ai</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">📱</div>
+                            <h3>微信咨询</h3>
+                            <p>扫描二维码或填写表单</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">📍</div>
+                            <h3>公司地址</h3>
+                            <p>福建省漳州市高新区</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">⏰</div>
+                            <h3>服务时间</h3>
+                            <p>周一至周五 9:00-18:00</p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">手机号 <span style="color: #6E6E73;">(选填)</span></label>
-                        <input type="tel" id="phone" name="phone" placeholder="请输入您的手机号">
-                        <div class="form-note">请至少填写微信号或手机号其中一个</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">咨询内容 <span style="color: #6E6E73;">(选填)</span></label>
-                        <textarea id="message" name="message" placeholder="请描述您的咨询内容..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn" id="submitBtn">提交咨询</button>
-                </form>
 
-                <div class="contact-info">
-                    <h3>其他联系方式</h3>
-                    <p>我们会在收到您的咨询后尽快与您联系</p>
+                    <!-- 右侧：表单 -->
+                    <div class="form-section">
+                        <form class="contact-form" id="contactForm" name="contact" netlify netlify-honeypot="bot-field" data-netlify="true">
+                            <!-- Netlify 隐藏字段，用于防止垃圾邮件 -->
+                            <input type="hidden" name="form-name" value="contact" />
+                            <p style="display: none;">
+                                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                            </p>
+                            <div class="form-header">
+                                <h3>填写咨询表单</h3>
+                                <p>我们会在收到您的咨询后尽快与您联系</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="wechat">
+                                    <span class="label-icon">💬</span>
+                                    微信号 <span style="color: #6E6E73;">(选填)</span>
+                                </label>
+                                <input type="text" id="wechat" name="wechat" placeholder="请输入您的微信号">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">
+                                    <span class="label-icon">📞</span>
+                                    手机号 <span style="color: #6E6E73;">(选填)</span>
+                                </label>
+                                <input type="tel" id="phone" name="phone" placeholder="请输入您的手机号">
+                                <div class="form-note">请至少填写微信号或手机号其中一个</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">
+                                    <span class="label-icon">✍️</span>
+                                    咨询内容 <span style="color: #6E6E73;">(选填)</span>
+                                </label>
+                                <textarea id="message" name="message" placeholder="请描述您的咨询内容..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn" id="submitBtn">提交咨询</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -2501,6 +2613,7 @@
         <p>漳州高新区瑞幻智能科技有限公司</p>
         <p>&copy; 2024 瑞幻智能. All rights reserved.</p>
         <p class="footer-note">*基于公司技术实力与发展愿景的目标定位</p>
+        <p class="footer-note">*以上数据和内容均由AI生成，供测试使用。</p>
     </footer>
 
     <script>

@@ -3,61 +3,98 @@
     <section class="contact-section">
       <h2 class="section-title">联系我们</h2>
       <div class="contact-container">
-        <form 
-          class="contact-form" 
-          name="contact" 
-          netlify 
-          netlify-honeypot="bot-field"
-          data-netlify="true"
-          @submit.prevent="handleSubmit"
-        >
-          <!-- Netlify 隐藏字段，用于防止垃圾邮件 -->
-          <input type="hidden" name="form-name" value="contact" />
-          <p style="display: none;">
-            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-          </p>
-          <div class="form-group">
-            <label for="wechat">微信号 <span class="optional">(选填)</span></label>
-            <input 
-              type="text" 
-              id="wechat" 
-              name="wechat"
-              v-model="form.wechat"
-              placeholder="请输入您的微信号"
-            >
+        <div class="contact-layout">
+          <!-- 左侧：联系信息卡片 -->
+          <div class="contact-info-section">
+            <div class="info-card">
+              <div class="info-icon">📧</div>
+              <h3>邮箱联系</h3>
+              <p>contact@rayso.ai</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">📱</div>
+              <h3>微信咨询</h3>
+              <p>扫描二维码或填写表单</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">📍</div>
+              <h3>公司地址</h3>
+              <p>福建省漳州市高新区</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">⏰</div>
+              <h3>服务时间</h3>
+              <p>周一至周五 9:00-18:00</p>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="phone">手机号 <span class="optional">(选填)</span></label>
-            <input 
-              type="tel" 
-              id="phone" 
-              name="phone"
-              v-model="form.phone"
-              placeholder="请输入您的手机号"
-            >
-            <div class="form-note">请至少填写微信号或手机号其中一个</div>
-          </div>
-          <div class="form-group">
-            <label for="message">咨询内容 <span class="optional">(选填)</span></label>
-            <textarea 
-              id="message" 
-              name="message"
-              v-model="form.message"
-              placeholder="请描述您的咨询内容..."
-            ></textarea>
-          </div>
-          <button 
-            type="submit" 
-            class="submit-btn" 
-            :disabled="isSubmitting"
-          >
-            {{ isSubmitting ? '提交中...' : '提交咨询' }}
-          </button>
-        </form>
 
-        <div class="contact-info">
-          <h3>其他联系方式</h3>
-          <p>我们会在收到您的咨询后尽快与您联系</p>
+          <!-- 右侧：表单 -->
+          <div class="form-section">
+            <form 
+              class="contact-form" 
+              name="contact" 
+              netlify 
+              netlify-honeypot="bot-field"
+              data-netlify="true"
+              @submit.prevent="handleSubmit"
+            >
+              <!-- Netlify 隐藏字段，用于防止垃圾邮件 -->
+              <input type="hidden" name="form-name" value="contact" />
+              <p style="display: none;">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+              <div class="form-header">
+                <h3>填写咨询表单</h3>
+                <p>我们会在收到您的咨询后尽快与您联系</p>
+              </div>
+              <div class="form-group">
+                <label for="wechat">
+                  <span class="label-icon">💬</span>
+                  微信号 <span class="optional">(选填)</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="wechat" 
+                  name="wechat"
+                  v-model="form.wechat"
+                  placeholder="请输入您的微信号"
+                >
+              </div>
+              <div class="form-group">
+                <label for="phone">
+                  <span class="label-icon">📞</span>
+                  手机号 <span class="optional">(选填)</span>
+                </label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone"
+                  v-model="form.phone"
+                  placeholder="请输入您的手机号"
+                >
+                <div class="form-note">请至少填写微信号或手机号其中一个</div>
+              </div>
+              <div class="form-group">
+                <label for="message">
+                  <span class="label-icon">✍️</span>
+                  咨询内容 <span class="optional">(选填)</span>
+                </label>
+                <textarea 
+                  id="message" 
+                  name="message"
+                  v-model="form.message"
+                  placeholder="请描述您的咨询内容..."
+                ></textarea>
+              </div>
+              <button 
+                type="submit" 
+                class="submit-btn" 
+                :disabled="isSubmitting"
+              >
+                {{ isSubmitting ? '提交中...' : '提交咨询' }}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -153,14 +190,85 @@ const handleSubmit = async (e) => {
 }
 
 .contact-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* 联系信息卡片区域 */
+.contact-info-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.info-card {
+    background: linear-gradient(135deg, #F5F5F7 0%, #FFFFFF 100%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.info-card h3 {
+    font-size: 18px;
+    color: #1D1D1F;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.info-card p {
+    font-size: 15px;
+    color: #6E6E73;
+    line-height: 1.6;
+}
+
+/* 表单区域 */
+.form-section {
+    position: sticky;
+    top: 100px;
+}
+
 .contact-form {
-    background: #F5F5F7;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     padding: 40px;
     border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-header {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.form-header h3 {
+    font-size: 24px;
+    color: #1D1D1F;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-header p {
+    font-size: 14px;
+    color: #6E6E73;
 }
 
 .form-group {
@@ -168,10 +276,16 @@ const handleSubmit = async (e) => {
 }
 
 .form-group label {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 8px;
     color: #1D1D1F;
     font-weight: 500;
+}
+
+.label-icon {
+    font-size: 18px;
 }
 
 .optional {
@@ -230,22 +344,6 @@ const handleSubmit = async (e) => {
     cursor: not-allowed;
 }
 
-.contact-info {
-    margin-top: 60px;
-    text-align: center;
-}
-
-.contact-info h3 {
-    font-size: 24px;
-    color: #1D1D1F;
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    font-size: 16px;
-    color: #6E6E73;
-    margin-bottom: 8px;
-}
 
 @media (max-width: 768px) {
     /* 区域 padding 优化 */
@@ -259,8 +357,48 @@ const handleSubmit = async (e) => {
         margin-bottom: 30px;
     }
 
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .form-section {
+        position: static;
+    }
+
+    .contact-info-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .info-card {
+        padding: 20px;
+    }
+
+    .info-icon {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .info-card h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .info-card p {
+        font-size: 13px;
+    }
+
     .contact-form {
         padding: 24px;
+    }
+
+    .form-header h3 {
+        font-size: 20px;
+    }
+
+    .form-header p {
+        font-size: 13px;
     }
 
     .form-group {
@@ -270,6 +408,10 @@ const handleSubmit = async (e) => {
     .form-group label {
         font-size: 14px;
         margin-bottom: 6px;
+    }
+
+    .label-icon {
+        font-size: 16px;
     }
 
     .form-group input,
@@ -289,19 +431,6 @@ const handleSubmit = async (e) => {
     .submit-btn {
         padding: 14px;
         font-size: 16px;
-    }
-
-    .contact-info {
-        margin-top: 40px;
-    }
-
-    .contact-info h3 {
-        font-size: 20px;
-        margin-bottom: 16px;
-    }
-
-    .contact-info p {
-        font-size: 14px;
     }
 }
 </style>

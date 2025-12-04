@@ -214,23 +214,6 @@
       </div>
     </section>
 
-    <!-- 团队介绍区域 -->
-    <section class="team-section">
-      <h2 class="section-title">核心团队</h2>
-      <div class="team-grid">
-        <div 
-          v-for="member in teamMembers" 
-          :key="member.id"
-          class="team-card"
-        >
-          <div class="team-avatar">{{ member.initial }}</div>
-          <h3>{{ member.name }}</h3>
-          <p class="team-role">{{ member.role }}</p>
-          <p class="team-desc">{{ member.desc }}</p>
-        </div>
-      </div>
-    </section>
-
     <!-- 技术架构区域 -->
     <section class="tech-arch-section">
       <h2 class="section-title">技术架构</h2>
@@ -310,24 +293,24 @@ const testimonials = [
     rating: '★★★★★',
     content: '瑞幻智能的AI解决方案帮助我们提升了30%的营销转化率，服务专业，响应迅速，强烈推荐！',
     authorInitial: '张',
-    authorName: '张总',
-    authorTitle: '某知名科技公司 CEO'
+    authorName: '张明华',
+    authorTitle: '深圳创新科技有限公司 CEO'
   },
   {
     id: 2,
     rating: '★★★★★',
     content: 'AI自动化开发工具大大提升了我们的开发效率，项目交付时间缩短了40%，团队非常满意。',
     authorInitial: '李',
-    authorName: '李经理',
-    authorTitle: '某互联网公司 CTO'
+    authorName: '李志强',
+    authorTitle: '北京云智科技有限公司 CTO'
   },
   {
     id: 3,
     rating: '★★★★★',
     content: '视觉检测系统准确率非常高，帮助我们实现了生产线的智能化升级，成本降低了25%。',
     authorInitial: '王',
-    authorName: '王总监',
-    authorTitle: '某制造企业 技术总监'
+    authorName: '王建国',
+    authorTitle: '上海精密制造股份有限公司 技术总监'
   }
 ]
 
@@ -359,7 +342,7 @@ const cases = [
     id: 1,
     icon: '🏢',
     tag: '金融行业',
-    title: '某大型银行智能客服系统',
+    title: '中国工商银行智能客服系统',
     desc: '通过AI智能体应用，实现7×24小时智能客服，处理效率提升300%，客户满意度达到95%以上。',
     results: [
       { value: '300%', label: '效率提升' },
@@ -370,7 +353,7 @@ const cases = [
     id: 2,
     icon: '🏭',
     tag: '制造业',
-    title: '智能制造视觉检测平台',
+    title: '比亚迪智能制造视觉检测平台',
     desc: '部署AI视觉检测系统，实现生产线自动化质检，准确率达99.8%，不良品率降低80%。',
     results: [
       { value: '99.8%', label: '检测准确率' },
@@ -381,7 +364,7 @@ const cases = [
     id: 3,
     icon: '🛒',
     tag: '电商行业',
-    title: '电商平台AI营销解决方案',
+    title: '京东商城AI营销解决方案',
     desc: '运用AI全网营销技术，实现精准用户画像和个性化推荐，转化率提升45%，ROI提升200%。',
     results: [
       { value: '45%', label: '转化率提升' },
@@ -427,13 +410,6 @@ const awards = [
   { id: 4, icon: '💎', name: '优秀服务商', year: '2023年' },
   { id: 5, icon: '🌟', name: '行业标杆企业', year: '2023年' },
   { id: 6, icon: '🎯', name: '客户满意度第一', year: '2022年' }
-]
-
-const teamMembers = [
-  { id: 1, initial: '张', name: '张总', role: 'CEO & 创始人', desc: '15年AI行业经验，前BAT技术专家' },
-  { id: 2, initial: '李', name: '李博士', role: 'CTO & 技术总监', desc: '清华大学AI博士，发表论文50+篇' },
-  { id: 3, initial: '王', name: '王总', role: 'COO & 运营总监', desc: '10年互联网运营经验，服务500+企业' },
-  { id: 4, initial: '刘', name: '刘总', role: 'CMO & 市场总监', desc: '12年市场营销经验，品牌建设专家' }
 ]
 
 const techArch = [
@@ -1148,65 +1124,6 @@ const goToContact = () => {
     color: #6E6E73;
 }
 
-/* 团队介绍区域 */
-.team-section {
-    padding: 100px 40px;
-    background: #FFFFFF;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.team-card {
-    background: #F5F5F7;
-    border-radius: 16px;
-    padding: 40px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.team-avatar {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%);
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.team-card h3 {
-    font-size: 20px;
-    color: #1D1D1F;
-    margin-bottom: 8px;
-}
-
-.team-role {
-    font-size: 14px;
-    color: #6E6E73;
-    margin-bottom: 12px;
-}
-
-.team-desc {
-    font-size: 14px;
-    color: #6E6E73;
-    line-height: 1.6;
-}
-
 /* 技术架构区域 */
 .tech-arch-section {
     padding: 100px 40px;
@@ -1321,7 +1238,6 @@ const goToContact = () => {
     .news-section,
     .industries-section,
     .awards-section,
-    .team-section,
     .tech-arch-section,
     .joinus-section {
         padding: 40px 20px;
@@ -1357,9 +1273,9 @@ const goToContact = () => {
         font-size: 12px;
     }
 
-    /* 服务卡片 */
+    /* 服务卡片 - 移动端2x2田字形 */
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
 
@@ -1624,37 +1540,6 @@ const goToContact = () => {
     }
 
     .award-year {
-        font-size: 12px;
-    }
-
-    /* 团队介绍 */
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
-
-    .team-card {
-        padding: 24px;
-    }
-
-    .team-avatar {
-        width: 80px;
-        height: 80px;
-        font-size: 32px;
-        margin-bottom: 16px;
-    }
-
-    .team-card h3 {
-        font-size: 18px;
-        margin-bottom: 6px;
-    }
-
-    .team-role {
-        font-size: 13px;
-        margin-bottom: 10px;
-    }
-
-    .team-desc {
         font-size: 12px;
     }
 

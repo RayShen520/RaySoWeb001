@@ -3,6 +3,7 @@
     <p>漳州高新区瑞幻智能科技有限公司</p>
     <p>&copy; 2024 瑞幻智能. All rights reserved.</p>
     <p class="footer-note">*基于公司技术实力与发展愿景的目标定位</p>
+    <p class="footer-note">*以上数据和内容均由AI生成，供测试使用。</p>
   </footer>
 </template>
 
