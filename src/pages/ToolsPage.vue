@@ -20,6 +20,7 @@
           :key="tool.id"
           class="tool-card"
         >
+          <div class="tool-icon" v-if="tool.icon">{{ tool.icon }}</div>
           <h4>{{ tool.name }}</h4>
           <p>{{ tool.desc }}</p>
           <div class="tool-buttons">
@@ -239,6 +240,18 @@ const handleTutorial = (tool) => {
 .tool-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.tool-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 16px;
 }
 
 .tool-card h4 {

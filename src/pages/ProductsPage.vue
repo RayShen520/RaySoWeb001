@@ -16,13 +16,77 @@
           <ul class="product-features">
             <li v-for="feature in product.features" :key="feature">{{ feature }}</li>
           </ul>
+          <div class="product-specs">
+            <div class="specs-title">核心参数</div>
+            <div class="specs-grid">
+              <div 
+                v-for="spec in product.specs" 
+                :key="spec.label"
+                class="spec-item"
+              >
+                <span class="spec-label">{{ spec.label }}</span>
+                <span class="spec-value">{{ spec.value }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-scenarios">
+            <div class="scenarios-title">应用场景</div>
+            <div class="scenarios-list">
+              <span 
+                v-for="scenario in product.scenarios" 
+                :key="scenario"
+                class="scenario-tag"
+              >
+                {{ scenario }}
+              </span>
+            </div>
+          </div>
+          <div class="product-cta">
+            <a href="#" @click.prevent="goToContact" class="product-btn">立即咨询</a>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 产品对比区域 -->
+    <section class="comparison-section">
+      <h2 class="section-title">产品方案对比</h2>
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>功能特性</th>
+              <th>基础版</th>
+              <th>专业版</th>
+              <th>企业版</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr 
+              v-for="row in comparisonData" 
+              :key="row.feature"
+            >
+              <td>{{ row.feature }}</td>
+              <td>{{ row.basic }}</td>
+              <td>{{ row.professional }}</td>
+              <td>{{ row.enterprise }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </div>
 </template>
 
 <script setup>
+import { inject } from 'vue'
+
+const navigate = inject('navigate')
+
+const goToContact = () => {
+  navigate('contact')
+}
+
 const products = [
   {
     id: 1,
@@ -34,7 +98,14 @@ const products = [
       '自动化内容创作与发布',
       '多渠道营销整合',
       '实时效果监控与优化'
-    ]
+    ],
+    specs: [
+      { label: '支持平台', value: '50+' },
+      { label: '日处理量', value: '100万+' },
+      { label: '响应速度', value: '<100ms' },
+      { label: '准确率', value: '95%+' }
+    ],
+    scenarios: ['电商营销', '品牌推广', '内容营销', '社交媒体']
   },
   {
     id: 2,
@@ -46,7 +117,14 @@ const products = [
       '业务流程自动化',
       '智能决策支持',
       '多场景应用适配'
-    ]
+    ],
+    specs: [
+      { label: '并发支持', value: '10,000+' },
+      { label: '响应时间', value: '<200ms' },
+      { label: '理解准确率', value: '98%+' },
+      { label: '支持语言', value: '20+' }
+    ],
+    scenarios: ['智能客服', '业务助手', '数据分析', '决策支持']
   },
   {
     id: 3,
@@ -58,7 +136,14 @@ const products = [
       '自动化测试框架',
       'CI/CD自动化部署',
       '开发效率提升工具'
-    ]
+    ],
+    specs: [
+      { label: '代码生成率', value: '60%+' },
+      { label: '效率提升', value: '3-5倍' },
+      { label: '支持语言', value: '15+' },
+      { label: '测试覆盖率', value: '90%+' }
+    ],
+    scenarios: ['快速开发', '代码审查', '自动化测试', '持续集成']
   },
   {
     id: 4,
@@ -70,8 +155,25 @@ const products = [
       '实时检测与分析',
       '多场景应用支持',
       '定制化检测方案'
-    ]
+    ],
+    specs: [
+      { label: '检测准确率', value: '99.8%' },
+      { label: '处理速度', value: '<50ms' },
+      { label: '支持分辨率', value: '4K+' },
+      { label: '识别类别', value: '1000+' }
+    ],
+    scenarios: ['工业质检', '安全监控', '医疗影像', '智能识别']
   }
+]
+
+const comparisonData = [
+  { feature: 'AI模型数量', basic: '5个', professional: '20个', enterprise: '无限' },
+  { feature: 'API调用次数/月', basic: '10万', professional: '100万', enterprise: '无限' },
+  { feature: '数据存储', basic: '10GB', professional: '100GB', enterprise: '无限' },
+  { feature: '技术支持', basic: '邮件支持', professional: '7×24小时', enterprise: '专属顾问' },
+  { feature: '定制开发', basic: '—', professional: '✓', enterprise: '✓' },
+  { feature: '私有化部署', basic: '—', professional: '—', enterprise: '✓' },
+  { feature: 'SLA保障', basic: '99%', professional: '99.9%', enterprise: '99.99%' }
 ]
 </script>
 
@@ -114,12 +216,13 @@ const products = [
 .product-image {
     width: 100%;
     height: 400px;
-    background: #F5F5F7;
+    background: linear-gradient(135deg, #F5F5F7 0%, #E5E5E7 100%);
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 80px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .product-content h3 {
@@ -156,6 +259,145 @@ const products = [
     font-weight: bold;
 }
 
+.product-specs {
+    margin-top: 30px;
+    padding: 24px;
+    background: #F5F5F7;
+    border-radius: 12px;
+}
+
+.specs-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1D1D1F;
+    margin-bottom: 16px;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.spec-label {
+    font-size: 14px;
+    color: #6E6E73;
+}
+
+.spec-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1D1D1F;
+}
+
+.product-scenarios {
+    margin-top: 30px;
+}
+
+.scenarios-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1D1D1F;
+    margin-bottom: 16px;
+}
+
+.scenarios-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.scenario-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E7;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #1D1D1F;
+    transition: all 0.3s;
+}
+
+.scenario-tag:hover {
+    background: #1D4ED8;
+    color: #FFFFFF;
+    border-color: #1D4ED8;
+}
+
+.product-cta {
+    margin-top: 30px;
+}
+
+.product-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background: #1D4ED8;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.product-btn:hover {
+    background: #1E40AF;
+    transform: translateY(-2px);
+}
+
+/* 产品对比区域 */
+.comparison-section {
+    padding: 100px 40px;
+    background: #F5F5F7;
+}
+
+.comparison-table {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-table th {
+    background: #1D4ED8;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.comparison-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #F5F5F7;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tr:hover {
+    background: #F5F5F7;
+}
+
+.comparison-table .check-mark {
+    color: #1D4ED8;
+    font-weight: bold;
+}
+
 @media (max-width: 768px) {
     .product-detail {
         grid-template-columns: 1fr;
@@ -164,6 +406,18 @@ const products = [
 
     .product-detail.reverse {
         direction: ltr;
+    }
+
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-table {
+        overflow-x: auto;
+    }
+
+    .comparison-table table {
+        min-width: 600px;
     }
 }
 </style>
