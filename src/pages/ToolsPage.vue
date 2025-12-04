@@ -158,11 +158,16 @@ const handleLink = (tool) => {
 }
 
 const handleTutorial = (tool) => {
-  navigate('contact')
-  // 可以在这里添加提示，引导用户留言获取教程
-  setTimeout(() => {
-    showToast(`请在留言中说明需要"${tool.name}"的使用教程`)
-  }, 500)
+  // 如果有教程链接，直接打开
+  if (tool.tutorialUrl) {
+    window.open(tool.tutorialUrl, '_blank')
+  } else {
+    // 没有教程链接，跳转到联系我们页面
+    navigate('contact')
+    setTimeout(() => {
+      showToast(`请在留言中说明需要"${tool.name}"的使用教程`)
+    }, 500)
+  }
 }
 </script>
 

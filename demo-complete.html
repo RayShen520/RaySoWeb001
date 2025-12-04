@@ -189,6 +189,646 @@
             font-size: 16px;
         }
 
+        /* 统计数据区域 */
+        .stats-section {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, #F5F5F7 0%, #FFFFFF 100%);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .stat-title {
+            font-size: 16px;
+            color: #1D4ED8;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .stat-value {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1D1D1F;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .stat-desc {
+            font-size: 14px;
+            color: #6E6E73;
+            line-height: 1.5;
+        }
+
+        /* 认证资质区域 */
+        .certifications-section {
+            padding: 100px 40px;
+            background: #FFFFFF;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cert-item {
+            background: #F5F5F7;
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cert-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .cert-badge {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+
+        .cert-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1D1D1F;
+            margin-bottom: 8px;
+        }
+
+        .cert-desc {
+            font-size: 13px;
+            color: #6E6E73;
+        }
+
+        /* 优势特色区域 */
+        .features-section {
+            padding: 100px 40px;
+            background: #F5F5F7;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            font-size: 22px;
+            color: #1D1D1F;
+            margin-bottom: 12px;
+        }
+
+        .feature-item p {
+            font-size: 15px;
+            color: #6E6E73;
+            line-height: 1.6;
+        }
+
+        /* 客户案例区域 */
+        .clients-section {
+            padding: 100px 40px;
+            background: #FFFFFF;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .client-logo {
+            background: #F5F5F7;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 24px;
+            font-weight: 600;
+            color: #1D4ED8;
+        }
+
+        .client-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 客户评价区域 */
+        .testimonials-section {
+            padding: 100px 40px;
+            background: #F5F5F7;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial-content {
+            font-size: 16px;
+            color: #1D1D1F;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .author-info h4 {
+            font-size: 16px;
+            color: #1D1D1F;
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            font-size: 14px;
+            color: #6E6E73;
+        }
+
+        .testimonial-rating {
+            color: #FFB800;
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        /* 服务流程区域 */
+        .process-section {
+            padding: 100px 40px;
+            background: #FFFFFF;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .process-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1D1D1F;
+            margin-bottom: 12px;
+        }
+
+        .step-desc {
+            font-size: 14px;
+            color: #6E6E73;
+            line-height: 1.6;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 80px;
+            right: 80px;
+            height: 2px;
+            background: #E5E5E7;
+            z-index: 0;
+        }
+
+        @media (max-width: 768px) {
+            .process-steps::before {
+                display: none;
+            }
+        }
+
+        /* 技术优势区域 */
+        .tech-section {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, #F5F5F7 0%, #FFFFFF 100%);
+        }
+
+        .tech-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tech-item {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1D1D1F;
+        }
+
+        /* 成功案例区域 */
+        .cases-section {
+            padding: 100px 40px;
+            background: #FFFFFF;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .case-card {
+            background: #F5F5F7;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .case-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #FFFFFF;
+        }
+
+        .case-content {
+            padding: 30px;
+        }
+
+        .case-tag {
+            display: inline-block;
+            background: #1D4ED8;
+            color: #FFFFFF;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-bottom: 16px;
+        }
+
+        .case-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1D1D1F;
+            margin-bottom: 12px;
+        }
+
+        .case-desc {
+            font-size: 14px;
+            color: #6E6E73;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .case-result {
+            display: flex;
+            gap: 20px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .result-item {
+            flex: 1;
+        }
+
+        .result-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1D4ED8;
+            margin-bottom: 4px;
+        }
+
+        .result-label {
+            font-size: 12px;
+            color: #6E6E73;
+        }
+
+        /* 新闻动态区域 */
+        .news-section {
+            padding: 100px 40px;
+            background: #F5F5F7;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-date {
+            background: #1D4ED8;
+            color: #FFFFFF;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 20px 20px 0;
+            border-radius: 4px;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1D1D1F;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            font-size: 14px;
+            color: #6E6E73;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .news-link {
+            color: #1D4ED8;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .news-link:hover {
+            text-decoration: underline;
+        }
+
+        /* 行业解决方案区域 */
+        .industries-section {
+            padding: 100px 40px;
+            background: #FFFFFF;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .industry-card {
+            background: #F5F5F7;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .industry-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .industry-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1D1D1F;
+            margin-bottom: 12px;
+        }
+
+        .industry-desc {
+            font-size: 14px;
+            color: #6E6E73;
+            line-height: 1.6;
+        }
+
+        /* 奖项荣誉区域 */
+        .awards-section {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, #F5F5F7 0%, #FFFFFF 100%);
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .award-item {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .award-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .award-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .award-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1D1D1F;
+            margin-bottom: 8px;
+        }
+
+        .award-year {
+            font-size: 14px;
+            color: #6E6E73;
+        }
+
+        /* 加入我们区域 */
+        .joinus-section {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%);
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .joinus-content h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #FFFFFF;
+        }
+
+        .joinus-content p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .joinus-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #FFFFFF;
+            color: #1D4ED8;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .joinus-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
         /* 产品服务页 */
         .products-page {
             padding: 100px 40px;
@@ -197,7 +837,7 @@
 
         .product-detail {
             max-width: 1200px;
-            margin: 0 auto 80px;
+            margin: 0 auto 100px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
@@ -215,12 +855,13 @@
         .product-image {
             width: 100%;
             height: 400px;
-            background: #F5F5F7;
+            background: linear-gradient(135deg, #F5F5F7 0%, #E5E5E7 100%);
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 80px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
         .product-content h3 {
@@ -253,6 +894,145 @@
             content: '✓';
             position: absolute;
             left: 0;
+            color: #1D4ED8;
+            font-weight: bold;
+        }
+
+        .product-specs {
+            margin-top: 30px;
+            padding: 24px;
+            background: #F5F5F7;
+            border-radius: 12px;
+        }
+
+        .specs-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1D1D1F;
+            margin-bottom: 16px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .spec-label {
+            font-size: 14px;
+            color: #6E6E73;
+        }
+
+        .spec-value {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1D1D1F;
+        }
+
+        .product-cta {
+            margin-top: 30px;
+        }
+
+        .product-btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background: #1D4ED8;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .product-btn:hover {
+            background: #1E40AF;
+            transform: translateY(-2px);
+        }
+
+        .product-scenarios {
+            margin-top: 30px;
+        }
+
+        .scenarios-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1D1D1F;
+            margin-bottom: 16px;
+        }
+
+        .scenarios-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .scenario-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: #FFFFFF;
+            border: 1px solid #E5E5E7;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #1D1D1F;
+            transition: all 0.3s;
+        }
+
+        .scenario-tag:hover {
+            background: #1D4ED8;
+            color: #FFFFFF;
+            border-color: #1D4ED8;
+        }
+
+        /* 产品对比表格 */
+        .comparison-section {
+            padding: 100px 40px;
+            background: #F5F5F7;
+        }
+
+        .comparison-table {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th {
+            background: #1D4ED8;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #F5F5F7;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: #F5F5F7;
+        }
+
+        .check-mark {
             color: #1D4ED8;
             font-weight: bold;
         }
@@ -561,6 +1341,74 @@
                 grid-template-columns: 1fr;
             }
 
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .stat-value {
+                font-size: 36px;
+            }
+
+            .cert-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .cert-item {
+                padding: 20px 15px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .clients-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .process-step::after {
+                display: none;
+            }
+
+            .tech-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cases-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .industries-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .awards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .joinus-content h2 {
+                font-size: 36px;
+            }
+
+            .joinus-content p {
+                font-size: 18px;
+            }
+
             .product-detail {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -568,6 +1416,18 @@
 
             .product-detail:nth-child(even) {
                 direction: ltr;
+            }
+
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                overflow-x: auto;
+            }
+
+            .comparison-table table {
+                min-width: 600px;
             }
 
             .tools-grid {
@@ -624,6 +1484,32 @@
             <a href="#" onclick="showPage('contact'); return false;" class="cta-button">立即咨询</a>
         </section>
 
+        <!-- 统计数据区域 -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-title">企业客户</div>
+                    <div class="stat-value">120+</div>
+                    <div class="stat-desc">覆盖12个行业</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">上线终端</div>
+                    <div class="stat-value">48,000</div>
+                    <div class="stat-desc">全球42城运行</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">模型更新</div>
+                    <div class="stat-value">72h</div>
+                    <div class="stat-desc">自动安全审核</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title">满意度</div>
+                    <div class="stat-value">98%</div>
+                    <div class="stat-desc">NPS 67分</div>
+                </div>
+            </div>
+        </section>
+
         <section class="services">
             <h2 class="section-title">核心业务</h2>
             <div class="services-grid">
@@ -649,6 +1535,418 @@
                 </div>
             </div>
         </section>
+
+        <!-- 认证资质区域 -->
+        <section class="certifications-section">
+            <h2 class="section-title">资质认证</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="cert-badge">ISO</div>
+                    <div class="cert-name">ISO 27001</div>
+                    <div class="cert-desc">信息安全管理体系认证</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-badge">CMMI</div>
+                    <div class="cert-name">CMMI 5级</div>
+                    <div class="cert-desc">软件能力成熟度模型</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-badge">AI</div>
+                    <div class="cert-name">AI能力认证</div>
+                    <div class="cert-desc">人工智能企业认证</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-badge">高企</div>
+                    <div class="cert-name">高新技术企业</div>
+                    <div class="cert-desc">国家高新技术企业认定</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-badge">软著</div>
+                    <div class="cert-name">软件著作权</div>
+                    <div class="cert-desc">50+项软件著作权</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-badge">专利</div>
+                    <div class="cert-name">发明专利</div>
+                    <div class="cert-desc">30+项AI相关专利</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 优势特色区域 -->
+        <section class="features-section">
+            <h2 class="section-title">核心优势</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h3>数据安全</h3>
+                    <p>通过ISO 27001认证，采用企业级加密技术，确保客户数据安全无忧</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>极速响应</h3>
+                    <p>全球CDN加速，毫秒级响应，支持高并发访问，保障业务稳定运行</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h3>精准智能</h3>
+                    <p>基于深度学习算法，AI模型准确率达98%以上，持续优化升级</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌐</div>
+                    <h3>全球服务</h3>
+                    <p>覆盖42个城市，7×24小时技术支持，多语言服务团队</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <h3>持续创新</h3>
+                    <p>72小时模型更新周期，快速响应市场变化，保持技术领先</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🤝</div>
+                    <h3>专业服务</h3>
+                    <p>98%客户满意度，NPS 67分，一对一专属顾问，全程跟踪服务</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 客户案例区域 -->
+        <section class="clients-section">
+            <h2 class="section-title">合作伙伴</h2>
+            <div class="clients-grid">
+                <div class="client-logo">华为</div>
+                <div class="client-logo">腾讯</div>
+                <div class="client-logo">阿里巴巴</div>
+                <div class="client-logo">字节跳动</div>
+                <div class="client-logo">京东</div>
+                <div class="client-logo">小米</div>
+            </div>
+        </section>
+
+        <!-- 客户评价区域 -->
+        <section class="testimonials-section">
+            <h2 class="section-title">客户评价</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <div class="testimonial-content">
+                        "瑞幻智能的AI解决方案帮助我们提升了30%的营销转化率，服务专业，响应迅速，强烈推荐！"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">张</div>
+                        <div class="author-info">
+                            <h4>张总</h4>
+                            <p>某知名科技公司 CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <div class="testimonial-content">
+                        "AI自动化开发工具大大提升了我们的开发效率，项目交付时间缩短了40%，团队非常满意。"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">李</div>
+                        <div class="author-info">
+                            <h4>李经理</h4>
+                            <p>某互联网公司 CTO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <div class="testimonial-content">
+                        "视觉检测系统准确率非常高，帮助我们实现了生产线的智能化升级，成本降低了25%。"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">王</div>
+                        <div class="author-info">
+                            <h4>王总监</h4>
+                            <p>某制造企业 技术总监</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 服务流程区域 -->
+        <section class="process-section">
+            <h2 class="section-title">服务流程</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">需求分析</div>
+                    <div class="step-desc">深入了解业务需求，制定个性化解决方案</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">方案设计</div>
+                    <div class="step-desc">专业团队设计技术方案，确保可行性</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">开发实施</div>
+                    <div class="step-desc">敏捷开发，快速迭代，确保项目进度</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-title">测试验收</div>
+                    <div class="step-desc">严格测试，确保质量，客户验收</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-title">上线运维</div>
+                    <div class="step-desc">平稳上线，7×24小时监控，持续优化</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术优势区域 -->
+        <section class="tech-section">
+            <h2 class="section-title">技术优势</h2>
+            <div class="tech-list">
+                <div class="tech-item">深度学习</div>
+                <div class="tech-item">机器学习</div>
+                <div class="tech-item">自然语言处理</div>
+                <div class="tech-item">计算机视觉</div>
+                <div class="tech-item">知识图谱</div>
+                <div class="tech-item">强化学习</div>
+                <div class="tech-item">联邦学习</div>
+                <div class="tech-item">边缘计算</div>
+                <div class="tech-item">云计算</div>
+                <div class="tech-item">大数据分析</div>
+                <div class="tech-item">区块链</div>
+                <div class="tech-item">物联网</div>
+            </div>
+        </section>
+
+        <!-- 成功案例区域 -->
+        <section class="cases-section">
+            <h2 class="section-title">成功案例</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-image">🏢</div>
+                    <div class="case-content">
+                        <span class="case-tag">金融行业</span>
+                        <h3 class="case-title">某大型银行智能客服系统</h3>
+                        <p class="case-desc">通过AI智能体应用，实现7×24小时智能客服，处理效率提升300%，客户满意度达到95%以上。</p>
+                        <div class="case-result">
+                            <div class="result-item">
+                                <div class="result-value">300%</div>
+                                <div class="result-label">效率提升</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value">95%</div>
+                                <div class="result-label">满意度</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">🏭</div>
+                    <div class="case-content">
+                        <span class="case-tag">制造业</span>
+                        <h3 class="case-title">智能制造视觉检测平台</h3>
+                        <p class="case-desc">部署AI视觉检测系统，实现生产线自动化质检，准确率达99.8%，不良品率降低80%。</p>
+                        <div class="case-result">
+                            <div class="result-item">
+                                <div class="result-value">99.8%</div>
+                                <div class="result-label">检测准确率</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value">80%</div>
+                                <div class="result-label">不良品降低</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">🛒</div>
+                    <div class="case-content">
+                        <span class="case-tag">电商行业</span>
+                        <h3 class="case-title">电商平台AI营销解决方案</h3>
+                        <p class="case-desc">运用AI全网营销技术，实现精准用户画像和个性化推荐，转化率提升45%，ROI提升200%。</p>
+                        <div class="case-result">
+                            <div class="result-item">
+                                <div class="result-value">45%</div>
+                                <div class="result-label">转化率提升</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value">200%</div>
+                                <div class="result-label">ROI提升</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 新闻动态区域 -->
+        <section class="news-section">
+            <h2 class="section-title">最新动态</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-date">2024-12-04</div>
+                    <div class="news-content">
+                        <h3 class="news-title">瑞幻智能荣获"2024年度AI创新企业"大奖</h3>
+                        <p class="news-excerpt">在2024年度AI创新峰会上，瑞幻智能凭借在AI智能体应用领域的卓越表现，荣获"年度AI创新企业"称号...</p>
+                        <a href="#" class="news-link">了解更多 →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-date">2024-11-28</div>
+                    <div class="news-content">
+                        <h3 class="news-title">全新AI自动化开发平台正式上线</h3>
+                        <p class="news-excerpt">经过6个月的研发和测试，瑞幻智能全新AI自动化开发平台正式上线，支持多种编程语言和框架...</p>
+                        <a href="#" class="news-link">了解更多 →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-date">2024-11-15</div>
+                    <div class="news-content">
+                        <h3 class="news-title">与华为云达成战略合作，共建AI生态</h3>
+                        <p class="news-excerpt">瑞幻智能与华为云签署战略合作协议，双方将在AI技术、云计算服务等领域展开深度合作...</p>
+                        <a href="#" class="news-link">了解更多 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 行业解决方案区域 -->
+        <section class="industries-section">
+            <h2 class="section-title">行业解决方案</h2>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">🏦</div>
+                    <h3 class="industry-name">金融科技</h3>
+                    <p class="industry-desc">智能风控、反欺诈、智能投顾等金融AI解决方案</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">🏥</div>
+                    <h3 class="industry-name">医疗健康</h3>
+                    <p class="industry-desc">医学影像分析、智能诊断、健康管理等AI应用</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">🏭</div>
+                    <h3 class="industry-name">智能制造</h3>
+                    <p class="industry-desc">工业视觉检测、预测性维护、质量管控系统</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">🛒</div>
+                    <h3 class="industry-name">零售电商</h3>
+                    <p class="industry-desc">智能推荐、精准营销、供应链优化解决方案</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">🎓</div>
+                    <h3 class="industry-name">教育培训</h3>
+                    <p class="industry-desc">智能教学、个性化学习、知识图谱构建</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">🚗</div>
+                    <h3 class="industry-name">智慧交通</h3>
+                    <p class="industry-desc">智能调度、路况预测、自动驾驶技术支持</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 奖项荣誉区域 -->
+        <section class="awards-section">
+            <h2 class="section-title">荣誉奖项</h2>
+            <div class="awards-grid">
+                <div class="award-item">
+                    <div class="award-icon">🏆</div>
+                    <div class="award-name">AI创新企业奖</div>
+                    <div class="award-year">2024年</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-icon">⭐</div>
+                    <div class="award-name">最佳AI解决方案</div>
+                    <div class="award-year">2024年</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-icon">🎖️</div>
+                    <div class="award-name">科技创新奖</div>
+                    <div class="award-year">2023年</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-icon">💎</div>
+                    <div class="award-name">优秀服务商</div>
+                    <div class="award-year">2023年</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-icon">🌟</div>
+                    <div class="award-name">行业标杆企业</div>
+                    <div class="award-year">2023年</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-icon">🎯</div>
+                    <div class="award-name">客户满意度第一</div>
+                    <div class="award-year">2022年</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 团队介绍区域 -->
+        <section class="team-section" style="padding: 100px 40px; background: #FFFFFF;">
+            <h2 class="section-title">核心团队</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+                <div style="background: #F5F5F7; border-radius: 16px; padding: 40px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 40px; font-weight: bold;">张</div>
+                    <h3 style="font-size: 20px; color: #1D1D1F; margin-bottom: 8px;">张总</h3>
+                    <p style="font-size: 14px; color: #6E6E73; margin-bottom: 12px;">CEO & 创始人</p>
+                    <p style="font-size: 14px; color: #6E6E73; line-height: 1.6;">15年AI行业经验，前BAT技术专家</p>
+                </div>
+                <div style="background: #F5F5F7; border-radius: 16px; padding: 40px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 40px; font-weight: bold;">李</div>
+                    <h3 style="font-size: 20px; color: #1D1D1F; margin-bottom: 8px;">李博士</h3>
+                    <p style="font-size: 14px; color: #6E6E73; margin-bottom: 12px;">CTO & 技术总监</p>
+                    <p style="font-size: 14px; color: #6E6E73; line-height: 1.6;">清华大学AI博士，发表论文50+篇</p>
+                </div>
+                <div style="background: #F5F5F7; border-radius: 16px; padding: 40px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 40px; font-weight: bold;">王</div>
+                    <h3 style="font-size: 20px; color: #1D1D1F; margin-bottom: 8px;">王总</h3>
+                    <p style="font-size: 14px; color: #6E6E73; margin-bottom: 12px;">COO & 运营总监</p>
+                    <p style="font-size: 14px; color: #6E6E73; line-height: 1.6;">10年互联网运营经验，服务500+企业</p>
+                </div>
+                <div style="background: #F5F5F7; border-radius: 16px; padding: 40px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 40px; font-weight: bold;">刘</div>
+                    <h3 style="font-size: 20px; color: #1D1D1F; margin-bottom: 8px;">刘总</h3>
+                    <p style="font-size: 14px; color: #6E6E73; margin-bottom: 12px;">CMO & 市场总监</p>
+                    <p style="font-size: 14px; color: #6E6E73; line-height: 1.6;">12年市场营销经验，品牌建设专家</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术架构区域 -->
+        <section class="tech-arch-section" style="padding: 100px 40px; background: #F5F5F7;">
+            <h2 class="section-title">技术架构</h2>
+            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div style="background: #FFFFFF; border-radius: 16px; padding: 40px;">
+                    <div style="font-size: 40px; margin-bottom: 20px;">🏗️</div>
+                    <h3 style="font-size: 22px; color: #1D1D1F; margin-bottom: 16px;">微服务架构</h3>
+                    <p style="font-size: 15px; color: #6E6E73; line-height: 1.6;">采用微服务架构设计，模块化部署，支持弹性扩展，保障系统高可用性</p>
+                </div>
+                <div style="background: #FFFFFF; border-radius: 16px; padding: 40px;">
+                    <div style="font-size: 40px; margin-bottom: 20px;">☁️</div>
+                    <h3 style="font-size: 22px; color: #1D1D1F; margin-bottom: 16px;">云原生技术</h3>
+                    <p style="font-size: 15px; color: #6E6E73; line-height: 1.6;">基于Kubernetes容器编排，支持多云部署，实现资源动态调度和自动扩缩容</p>
+                </div>
+                <div style="background: #FFFFFF; border-radius: 16px; padding: 40px;">
+                    <div style="font-size: 40px; margin-bottom: 20px;">🔐</div>
+                    <h3 style="font-size: 22px; color: #1D1D1F; margin-bottom: 16px;">安全防护</h3>
+                    <p style="font-size: 15px; color: #6E6E73; line-height: 1.6;">多层安全防护体系，数据加密传输，访问权限控制，符合等保三级要求</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 加入我们区域 -->
+        <section class="joinus-section">
+            <div class="joinus-content">
+                <h2>加入我们</h2>
+                <p>我们正在寻找对AI技术充满热情的优秀人才，一起推动人工智能技术的创新与发展</p>
+                <a href="#" onclick="showPage('contact'); return false;" class="joinus-button">立即加入</a>
+            </div>
+        </section>
     </div>
 
     <!-- 产品服务页 -->
@@ -667,6 +1965,39 @@
                         <li>多渠道营销整合</li>
                         <li>实时效果监控与优化</li>
                     </ul>
+                    <div class="product-specs">
+                        <div class="specs-title">核心参数</div>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">支持平台</span>
+                                <span class="spec-value">50+</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">日处理量</span>
+                                <span class="spec-value">100万+</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">响应速度</span>
+                                <span class="spec-value">&lt;100ms</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">准确率</span>
+                                <span class="spec-value">95%+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-scenarios">
+                        <div class="scenarios-title">应用场景</div>
+                        <div class="scenarios-list">
+                            <span class="scenario-tag">电商营销</span>
+                            <span class="scenario-tag">品牌推广</span>
+                            <span class="scenario-tag">内容营销</span>
+                            <span class="scenario-tag">社交媒体</span>
+                        </div>
+                    </div>
+                    <div class="product-cta">
+                        <a href="#" onclick="showPage('contact'); return false;" class="product-btn">立即咨询</a>
+                    </div>
                 </div>
             </div>
 
@@ -681,6 +2012,39 @@
                         <li>智能决策支持</li>
                         <li>多场景应用适配</li>
                     </ul>
+                    <div class="product-specs">
+                        <div class="specs-title">核心参数</div>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">并发支持</span>
+                                <span class="spec-value">10,000+</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">响应时间</span>
+                                <span class="spec-value">&lt;200ms</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">理解准确率</span>
+                                <span class="spec-value">98%+</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">支持语言</span>
+                                <span class="spec-value">20+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-scenarios">
+                        <div class="scenarios-title">应用场景</div>
+                        <div class="scenarios-list">
+                            <span class="scenario-tag">智能客服</span>
+                            <span class="scenario-tag">业务助手</span>
+                            <span class="scenario-tag">数据分析</span>
+                            <span class="scenario-tag">决策支持</span>
+                        </div>
+                    </div>
+                    <div class="product-cta">
+                        <a href="#" onclick="showPage('contact'); return false;" class="product-btn">立即咨询</a>
+                    </div>
                 </div>
             </div>
 
@@ -695,6 +2059,39 @@
                         <li>CI/CD自动化部署</li>
                         <li>开发效率提升工具</li>
                     </ul>
+                    <div class="product-specs">
+                        <div class="specs-title">核心参数</div>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">代码生成率</span>
+                                <span class="spec-value">60%+</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">效率提升</span>
+                                <span class="spec-value">3-5倍</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">支持语言</span>
+                                <span class="spec-value">15+</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">测试覆盖率</span>
+                                <span class="spec-value">90%+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-scenarios">
+                        <div class="scenarios-title">应用场景</div>
+                        <div class="scenarios-list">
+                            <span class="scenario-tag">快速开发</span>
+                            <span class="scenario-tag">代码审查</span>
+                            <span class="scenario-tag">自动化测试</span>
+                            <span class="scenario-tag">持续集成</span>
+                        </div>
+                    </div>
+                    <div class="product-cta">
+                        <a href="#" onclick="showPage('contact'); return false;" class="product-btn">立即咨询</a>
+                    </div>
                 </div>
             </div>
 
@@ -709,7 +2106,101 @@
                         <li>多场景应用支持</li>
                         <li>定制化检测方案</li>
                     </ul>
+                    <div class="product-specs">
+                        <div class="specs-title">核心参数</div>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">检测准确率</span>
+                                <span class="spec-value">99.8%</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">处理速度</span>
+                                <span class="spec-value">&lt;50ms</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">支持分辨率</span>
+                                <span class="spec-value">4K+</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">识别类别</span>
+                                <span class="spec-value">1000+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-scenarios">
+                        <div class="scenarios-title">应用场景</div>
+                        <div class="scenarios-list">
+                            <span class="scenario-tag">工业质检</span>
+                            <span class="scenario-tag">安全监控</span>
+                            <span class="scenario-tag">医疗影像</span>
+                            <span class="scenario-tag">智能识别</span>
+                        </div>
+                    </div>
+                    <div class="product-cta">
+                        <a href="#" onclick="showPage('contact'); return false;" class="product-btn">立即咨询</a>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- 产品对比区域 -->
+        <section class="comparison-section">
+            <h2 class="section-title">产品方案对比</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>功能特性</th>
+                            <th>基础版</th>
+                            <th>专业版</th>
+                            <th>企业版</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AI模型数量</td>
+                            <td>5个</td>
+                            <td>20个</td>
+                            <td>无限</td>
+                        </tr>
+                        <tr>
+                            <td>API调用次数/月</td>
+                            <td>10万</td>
+                            <td>100万</td>
+                            <td>无限</td>
+                        </tr>
+                        <tr>
+                            <td>数据存储</td>
+                            <td>10GB</td>
+                            <td>100GB</td>
+                            <td>无限</td>
+                        </tr>
+                        <tr>
+                            <td>技术支持</td>
+                            <td>邮件支持</td>
+                            <td>7×24小时</td>
+                            <td>专属顾问</td>
+                        </tr>
+                        <tr>
+                            <td>定制开发</td>
+                            <td><span class="check-mark">—</span></td>
+                            <td><span class="check-mark">✓</span></td>
+                            <td><span class="check-mark">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>私有化部署</td>
+                            <td><span class="check-mark">—</span></td>
+                            <td><span class="check-mark">—</span></td>
+                            <td><span class="check-mark">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>SLA保障</td>
+                            <td>99%</td>
+                            <td>99.9%</td>
+                            <td>99.99%</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </div>
@@ -780,24 +2271,27 @@
     <script>
         // 模拟工具数据（实际使用时从JSON文件或API获取）
         const toolsData = [
-            { id: 1, name: 'AI软著材料生成', desc: '用1句话生成1套软著材料', type: 'link', icon: '', url: 'https://www.llmove.com/' },
-            { id: 2, name: '短视频AI解析下载', desc: '免费下载130多个平台视频', type: 'link', icon: '', url: 'https://dy.kukutool.com/' },
-            { id: 3, name: '软件管家', desc: '1000+软件免费下载', type: 'link', icon: '', url: 'https://macosgj.com/win' },
-            { id: 4, name: 'AI注册商标', desc: '权大师智能注册商标', type: 'link', icon: '', url: 'https://www.quandashi.com/' },
-            { id: 5, name: '电子书汇总', desc: '超多电子书汇总，免费下载', type: 'link', icon: '', url: 'https://z-lib.by' },
-            { id: 6, name: 'AI排行榜', desc: 'AI每日新闻及应用排名', type: 'link', icon: '', url: 'https://www.aicpb.com/' },
-            { id: 7, name: 'AI营销助手', desc: '智能营销内容生成工具', type: 'download', icon: '📊' },
-            { id: 8, name: '智能体开发平台', desc: '快速构建AI智能体应用', type: 'link', icon: '🤖' },
-            { id: 9, name: '代码生成器', desc: 'AI驱动的代码自动生成工具', type: 'download', icon: '💻' },
-            { id: 10, name: '视觉检测系统', desc: '高精度图像识别与分析', type: 'download', icon: '👁️' },
-            { id: 11, name: '自动化测试工具', desc: '智能化的测试自动化框架', type: 'link', icon: '🧪' },
-            { id: 12, name: '数据分析平台', desc: '企业级数据分析解决方案', type: 'download', icon: '📈' },
-            { id: 13, name: '智能客服系统', desc: 'AI驱动的客服自动化', type: 'link', icon: '💬' },
-            { id: 14, name: '流程自动化引擎', desc: '业务流程智能化管理', type: 'download', icon: '⚙️' },
-            { id: 15, name: '内容创作工具', desc: 'AI辅助内容创作平台', type: 'link', icon: '✍️' },
-            { id: 16, name: '智能推荐系统', desc: '个性化推荐算法平台', type: 'download', icon: '🎯' },
-            { id: 17, name: '语音识别工具', desc: '高精度语音转文字', type: 'download', icon: '🎤' },
-            { id: 18, name: '图像处理工具', desc: '智能图像编辑与优化', type: 'link', icon: '🖼️' },
+            { id: 1, name: 'AI提示词管理（YPrompt）', desc: '开源的AI应用设计的提示词管理系统', type: 'link', icon: '📝', url: 'https://mp.weixin.qq.com/s/CtGStaF2eEtJ7CHKy-lY0A', tutorialUrl: '' },
+            { id: 2, name: 'AI生成小红书整套图文', desc: '一句话生成小红书整套图文，基于Banana Pro', type: 'link', icon: '📱', url: 'https://mp.weixin.qq.com/s/Eru-BrvwwdESgo_F58nFKQ', tutorialUrl: '' },
+            { id: 3, name: 'AI视频广告生成', desc: '无需剪辑，即刻访问，粘贴商品网址，秒速生成精彩视频广告', type: 'link', icon: '🎬', url: 'https://admaker.ai/zh', tutorialUrl: 'https://mp.weixin.qq.com/s/Rh8h1aYS9M2UwsSsPBDXxQ' },
+            { id: 4, name: 'AI软著材料生成', desc: '用1句话生成1套软著材料', type: 'link', icon: '', url: 'https://www.llmove.com/', tutorialUrl: '' },
+            { id: 5, name: '短视频AI解析下载', desc: '免费下载130多个平台视频', type: 'link', icon: '', url: 'https://dy.kukutool.com/', tutorialUrl: '' },
+            { id: 6, name: '软件管家', desc: '1000+软件免费下载', type: 'link', icon: '', url: 'https://macosgj.com/win', tutorialUrl: '' },
+            { id: 7, name: 'AI注册商标', desc: '权大师智能注册商标', type: 'link', icon: '', url: 'https://www.quandashi.com/', tutorialUrl: '' },
+            { id: 8, name: '电子书汇总', desc: '超多电子书汇总，免费下载', type: 'link', icon: '', url: 'https://z-lib.by', tutorialUrl: '' },
+            { id: 9, name: 'AI排行榜', desc: 'AI每日新闻及应用排名', type: 'link', icon: '', url: 'https://www.aicpb.com/', tutorialUrl: '' },
+            { id: 10, name: 'AI营销助手', desc: '智能营销内容生成工具', type: 'download', icon: '📊', tutorialUrl: '' },
+            { id: 11, name: '智能体开发平台', desc: '快速构建AI智能体应用', type: 'link', icon: '🤖', tutorialUrl: '' },
+            { id: 12, name: '代码生成器', desc: 'AI驱动的代码自动生成工具', type: 'download', icon: '💻', tutorialUrl: '' },
+            { id: 13, name: '视觉检测系统', desc: '高精度图像识别与分析', type: 'download', icon: '👁️', tutorialUrl: '' },
+            { id: 14, name: '自动化测试工具', desc: '智能化的测试自动化框架', type: 'link', icon: '🧪', tutorialUrl: '' },
+            { id: 15, name: '数据分析平台', desc: '企业级数据分析解决方案', type: 'download', icon: '📈', tutorialUrl: '' },
+            { id: 16, name: '智能客服系统', desc: 'AI驱动的客服自动化', type: 'link', icon: '💬', tutorialUrl: '' },
+            { id: 17, name: '流程自动化引擎', desc: '业务流程智能化管理', type: 'download', icon: '⚙️', tutorialUrl: '' },
+            { id: 18, name: '内容创作工具', desc: 'AI辅助内容创作平台', type: 'link', icon: '✍️', tutorialUrl: '' },
+            { id: 19, name: '智能推荐系统', desc: '个性化推荐算法平台', type: 'download', icon: '🎯', tutorialUrl: '' },
+            { id: 20, name: '语音识别工具', desc: '高精度语音转文字', type: 'download', icon: '🎤', tutorialUrl: '' },
+            { id: 21, name: '图像处理工具', desc: '智能图像编辑与优化', type: 'link', icon: '🖼️', tutorialUrl: '' },
         ];
 
         let currentPage = 1;
@@ -840,6 +2334,7 @@
 
             toolsGrid.innerHTML = currentTools.map(tool => `
                 <div class="tool-card">
+                    ${tool.icon ? `<div class="tool-icon">${tool.icon}</div>` : ''}
                     <h4>${tool.name}</h4>
                     <p>${tool.desc}</p>
                     <div class="tool-buttons">
@@ -928,11 +2423,16 @@
         // 处理使用教程
         function handleTutorial(toolId) {
             const tool = toolsData.find(t => t.id === toolId);
-            showPage('contact');
-            // 可以在这里添加提示，引导用户留言获取教程
-            setTimeout(() => {
-                showToast(`请在留言中说明需要"${tool.name}"的使用教程`);
-            }, 500);
+            // 如果有教程链接，直接打开
+            if (tool.tutorialUrl) {
+                window.open(tool.tutorialUrl, '_blank');
+            } else {
+                // 没有教程链接，跳转到联系我们页面
+                showPage('contact');
+                setTimeout(() => {
+                    showToast(`请在留言中说明需要"${tool.name}"的使用教程`);
+                }, 500);
+            }
         }
 
         // 显示提示消息
