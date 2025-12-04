@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方案二：浅色专业风 - 瑞幻智能</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: #FFFFFF;
+            color: #1D1D1F;
+            line-height: 1.6;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1D4ED8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #1D1D1F;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1D4ED8;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            margin-top: 80px;
+            padding: 120px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #F5F5F7 0%, #FFFFFF 100%);
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #1D1D1F;
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: #6E6E73;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #1D4ED8;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #1E40AF;
+            transform: translateY(-2px);
+        }
+
+        /* 业务板块 */
+        .services {
+            padding: 100px 40px;
+            background: #FFFFFF;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #1D1D1F;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: #F5F5F7;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%);
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #1D4ED8;
+        }
+
+        .service-card p {
+            color: #6E6E73;
+            font-size: 16px;
+        }
+
+        /* 页脚 */
+        .footer {
+            background: #F5F5F7;
+            padding: 60px 40px 30px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .footer p {
+            color: #6E6E73;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                font-size: 14px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">瑞幻智能</div>
+        <div class="nav-links">
+            <a href="#home">首页</a>
+            <a href="#services">产品服务</a>
+            <a href="#tools">工具下载</a>
+            <a href="#contact">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="hero" id="home">
+        <h1>AI驱动的智能未来</h1>
+        <p>专注于AI全网营销、智能体应用、自动化开发与视觉检测的创新科技公司</p>
+        <a href="#contact" class="cta-button">立即咨询</a>
+    </section>
+
+    <!-- 业务板块 -->
+    <section class="services" id="services">
+        <h2 class="section-title">核心业务</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3>AI全网营销</h3>
+                <p>智能化的全网营销解决方案，提升品牌影响力</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h3>AI智能体应用</h3>
+                <p>构建智能化的AI智能体应用系统</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>AI自动化开发</h3>
+                <p>高效的AI自动化开发工具与服务</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👁️</div>
+                <h3>AI视觉检测</h3>
+                <p>精准的AI视觉检测技术应用</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>漳州高新区瑞幻智能科技有限公司</p>
+        <p>商标：瑞幻（35类）、瑞幻智能（42类）</p>
+        <p>&copy; 2024 瑞幻智能. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

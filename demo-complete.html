@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>瑞幻智能 | RaySo.AI - 全球领先的AI智能解决方案提供商</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: #FFFFFF;
+            color: #1D1D1F;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1D4ED8;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #1D1D1F;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #1D4ED8;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #1D4ED8;
+        }
+
+        /* 页面容器 */
+        .page {
+            display: none;
+            min-height: calc(100vh - 80px);
+            margin-top: 80px;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            padding: 120px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #F5F5F7 0%, #FFFFFF 100%);
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1D1D1F;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+
+        .hero p {
+            font-size: 24px;
+            color: #6E6E73;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #1D4ED8;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .cta-button:hover {
+            background: #1E40AF;
+            transform: translateY(-2px);
+        }
+
+        /* 业务板块 */
+        .services {
+            padding: 100px 40px;
+            background: #FFFFFF;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #1D1D1F;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: #F5F5F7;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%);
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #1D4ED8;
+        }
+
+        .service-card p {
+            color: #6E6E73;
+            font-size: 16px;
+        }
+
+        /* 产品服务页 */
+        .products-page {
+            padding: 100px 40px;
+            background: #FFFFFF;
+        }
+
+        .product-detail {
+            max-width: 1200px;
+            margin: 0 auto 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .product-detail:nth-child(even) {
+            direction: rtl;
+        }
+
+        .product-detail:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 400px;
+            background: #F5F5F7;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+
+        .product-content h3 {
+            font-size: 36px;
+            color: #1D4ED8;
+            margin-bottom: 20px;
+        }
+
+        .product-content p {
+            font-size: 18px;
+            color: #6E6E73;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-top: 24px;
+        }
+
+        .product-features li {
+            padding: 12px 0;
+            color: #1D1D1F;
+            font-size: 16px;
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #1D4ED8;
+            font-weight: bold;
+        }
+
+        /* 工具下载页 */
+        .tools-page {
+            padding: 100px 40px;
+            background: #F5F5F7;
+            min-height: calc(100vh - 80px);
+        }
+
+        .tools-header {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 16px 50px 16px 20px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            font-size: 16px;
+            background: #FFFFFF;
+            transition: border-color 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #1D4ED8;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6E6E73;
+            font-size: 20px;
+        }
+
+        .tools-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .tool-card {
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1D4ED8 0%, #0066CC 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .tool-card h4 {
+            font-size: 20px;
+            color: #1D1D1F;
+            margin-bottom: 8px;
+        }
+
+        .tool-card p {
+            font-size: 14px;
+            color: #6E6E73;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .tool-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-download,
+        .btn-link,
+        .btn-tutorial {
+            flex: 1;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-download {
+            background: #1D4ED8;
+            color: #FFFFFF;
+        }
+
+        .btn-download:hover {
+            background: #1E40AF;
+        }
+
+        .btn-link {
+            background: #1D4ED8;
+            color: #FFFFFF;
+        }
+
+        .btn-link:hover {
+            background: #1E40AF;
+        }
+
+        .btn-tutorial {
+            background: #1D4ED8;
+            color: #FFFFFF;
+        }
+
+        .btn-tutorial:hover {
+            background: #1E40AF;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .page-btn {
+            padding: 10px 16px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: #FFFFFF;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .page-btn:hover,
+        .page-btn.active {
+            background: #1D4ED8;
+            color: #FFFFFF;
+            border-color: #1D4ED8;
+        }
+
+        /* 联系我们页 */
+        .contact-page {
+            padding: 100px 40px;
+            background: #FFFFFF;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: #F5F5F7;
+            padding: 40px;
+            border-radius: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1D1D1F;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+            background: #FFFFFF;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1D4ED8;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-note {
+            font-size: 14px;
+            color: #6E6E73;
+            margin-top: 4px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: #1D4ED8;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #1E40AF;
+        }
+
+        .submit-btn:disabled {
+            background: #CCCCCC;
+            cursor: not-allowed;
+        }
+
+        .contact-info {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            color: #1D1D1F;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            color: #6E6E73;
+            margin-bottom: 8px;
+        }
+
+        /* 页脚 */
+        .footer {
+            background: #F5F5F7;
+            padding: 60px 40px 30px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .footer p {
+            color: #6E6E73;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .footer-note {
+            color: #AAAAAA;
+            font-size: 11px;
+            margin-top: 20px;
+            opacity: 0.6;
+        }
+
+        /* 动画 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                font-size: 14px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-detail {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .product-detail:nth-child(even) {
+                direction: ltr;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 24px;
+            }
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #1D4ED8;
+            color: #FFFFFF;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 2000;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="logo" onclick="showPage('home')">瑞幻智能 | RaySo.AI</div>
+        <div class="nav-links">
+            <a href="#" onclick="showPage('home'); return false;" class="active" data-page="home">首页</a>
+            <a href="#" onclick="showPage('products'); return false;" data-page="products">产品服务</a>
+            <a href="#" onclick="showPage('tools'); return false;" data-page="tools">AI工具合集</a>
+            <a href="#" onclick="showPage('contact'); return false;" data-page="contact">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- 首页 -->
+    <div class="page active" id="home-page">
+        <section class="hero">
+            <h1>全球领先的AI智能解决方案提供商<sup style="font-size: 0.4em; vertical-align: super;">*</sup></h1>
+            <p>专注于AI全网营销、智能体应用、自动化开发与视觉检测的创新科技公司</p>
+            <a href="#" onclick="showPage('contact'); return false;" class="cta-button">立即咨询</a>
+        </section>
+
+        <section class="services">
+            <h2 class="section-title">核心业务</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>AI全网营销</h3>
+                    <p>智能化的全网营销解决方案，提升品牌影响力</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI智能体应用</h3>
+                    <p>构建智能化的AI智能体应用系统</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>AI自动化开发</h3>
+                    <p>高效的AI自动化开发工具与服务</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👁️</div>
+                    <h3>AI视觉检测</h3>
+                    <p>精准的AI视觉检测技术应用</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 产品服务页 -->
+    <div class="page" id="products-page">
+        <section class="products-page">
+            <h2 class="section-title">产品与服务</h2>
+            
+            <div class="product-detail">
+                <div class="product-image">🚀</div>
+                <div class="product-content">
+                    <h3>AI全网营销</h3>
+                    <p>基于人工智能技术的全网营销解决方案，帮助企业实现精准营销、提升品牌影响力。通过智能分析和自动化工具，优化营销策略，提高转化率。</p>
+                    <ul class="product-features">
+                        <li>智能数据分析与用户画像</li>
+                        <li>自动化内容创作与发布</li>
+                        <li>多渠道营销整合</li>
+                        <li>实时效果监控与优化</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-detail">
+                <div class="product-image">🤖</div>
+                <div class="product-content">
+                    <h3>AI智能体应用</h3>
+                    <p>构建企业级AI智能体应用系统，实现业务流程自动化、智能决策支持。提供定制化的智能体解决方案，满足不同行业需求。</p>
+                    <ul class="product-features">
+                        <li>智能对话与客服系统</li>
+                        <li>业务流程自动化</li>
+                        <li>智能决策支持</li>
+                        <li>多场景应用适配</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-detail">
+                <div class="product-image">⚙️</div>
+                <div class="product-content">
+                    <h3>AI自动化开发</h3>
+                    <p>提供高效的AI自动化开发工具与服务，加速软件开发流程，降低开发成本。支持代码生成、测试自动化、部署自动化等功能。</p>
+                    <ul class="product-features">
+                        <li>智能代码生成</li>
+                        <li>自动化测试框架</li>
+                        <li>CI/CD自动化部署</li>
+                        <li>开发效率提升工具</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-detail">
+                <div class="product-image">👁️</div>
+                <div class="product-content">
+                    <h3>AI视觉检测</h3>
+                    <p>精准的AI视觉检测技术应用，适用于工业质检、安全监控、医疗影像等多个领域。提供高精度的图像识别与分析服务。</p>
+                    <ul class="product-features">
+                        <li>高精度图像识别</li>
+                        <li>实时检测与分析</li>
+                        <li>多场景应用支持</li>
+                        <li>定制化检测方案</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 工具下载页 -->
+    <div class="page" id="tools-page">
+        <section class="tools-page">
+            <div class="tools-header">
+                <h2 class="section-title">AI工具合集</h2>
+                <div class="search-box">
+                    <input type="text" class="search-input" id="toolSearch" placeholder="搜索工具名称或描述...">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </div>
+
+            <div class="tools-grid" id="toolsGrid">
+                <!-- 工具卡片将通过JavaScript动态生成 -->
+            </div>
+
+            <div class="pagination" id="pagination">
+                <!-- 分页按钮将通过JavaScript动态生成 -->
+            </div>
+        </section>
+    </div>
+
+    <!-- 联系我们页 -->
+    <div class="page" id="contact-page">
+        <section class="contact-page">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-container">
+                <form class="contact-form" id="contactForm" name="contact" netlify netlify-honeypot="bot-field" data-netlify="true">
+                    <!-- Netlify 隐藏字段，用于防止垃圾邮件 -->
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+                    <div class="form-group">
+                        <label for="wechat">微信号 <span style="color: #6E6E73;">(选填)</span></label>
+                        <input type="text" id="wechat" name="wechat" placeholder="请输入您的微信号">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">手机号 <span style="color: #6E6E73;">(选填)</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="请输入您的手机号">
+                        <div class="form-note">请至少填写微信号或手机号其中一个</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">咨询内容 <span style="color: #6E6E73;">(选填)</span></label>
+                        <textarea id="message" name="message" placeholder="请描述您的咨询内容..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">提交咨询</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>其他联系方式</h3>
+                    <p>我们会在收到您的咨询后尽快与您联系</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>漳州高新区瑞幻智能科技有限公司</p>
+        <p>&copy; 2024 瑞幻智能. All rights reserved.</p>
+        <p class="footer-note">*基于公司技术实力与发展愿景的目标定位</p>
+    </footer>
+
+    <script>
+        // 模拟工具数据（实际使用时从JSON文件或API获取）
+        const toolsData = [
+            { id: 1, name: 'AI软著材料生成', desc: '用1句话生成1套软著材料', type: 'link', icon: '', url: 'https://www.llmove.com/' },
+            { id: 2, name: '短视频AI解析下载', desc: '免费下载130多个平台视频', type: 'link', icon: '', url: 'https://dy.kukutool.com/' },
+            { id: 3, name: '软件管家', desc: '1000+软件免费下载', type: 'link', icon: '', url: 'https://macosgj.com/win' },
+            { id: 4, name: 'AI注册商标', desc: '权大师智能注册商标', type: 'link', icon: '', url: 'https://www.quandashi.com/' },
+            { id: 5, name: '电子书汇总', desc: '超多电子书汇总，免费下载', type: 'link', icon: '', url: 'https://z-lib.by' },
+            { id: 6, name: 'AI排行榜', desc: 'AI每日新闻及应用排名', type: 'link', icon: '', url: 'https://www.aicpb.com/' },
+            { id: 7, name: 'AI营销助手', desc: '智能营销内容生成工具', type: 'download', icon: '📊' },
+            { id: 8, name: '智能体开发平台', desc: '快速构建AI智能体应用', type: 'link', icon: '🤖' },
+            { id: 9, name: '代码生成器', desc: 'AI驱动的代码自动生成工具', type: 'download', icon: '💻' },
+            { id: 10, name: '视觉检测系统', desc: '高精度图像识别与分析', type: 'download', icon: '👁️' },
+            { id: 11, name: '自动化测试工具', desc: '智能化的测试自动化框架', type: 'link', icon: '🧪' },
+            { id: 12, name: '数据分析平台', desc: '企业级数据分析解决方案', type: 'download', icon: '📈' },
+            { id: 13, name: '智能客服系统', desc: 'AI驱动的客服自动化', type: 'link', icon: '💬' },
+            { id: 14, name: '流程自动化引擎', desc: '业务流程智能化管理', type: 'download', icon: '⚙️' },
+            { id: 15, name: '内容创作工具', desc: 'AI辅助内容创作平台', type: 'link', icon: '✍️' },
+            { id: 16, name: '智能推荐系统', desc: '个性化推荐算法平台', type: 'download', icon: '🎯' },
+            { id: 17, name: '语音识别工具', desc: '高精度语音转文字', type: 'download', icon: '🎤' },
+            { id: 18, name: '图像处理工具', desc: '智能图像编辑与优化', type: 'link', icon: '🖼️' },
+        ];
+
+        let currentPage = 1;
+        const toolsPerPage = 9;
+        let filteredTools = [...toolsData];
+
+        // 页面切换
+        function showPage(pageId) {
+            // 隐藏所有页面
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // 显示目标页面
+            document.getElementById(pageId + '-page').classList.add('active');
+
+            // 更新导航栏激活状态
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === pageId) {
+                    link.classList.add('active');
+                }
+            });
+
+            // 滚动到顶部
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // 如果是工具页，初始化工具列表
+            if (pageId === 'tools') {
+                renderTools();
+            }
+        }
+
+        // 渲染工具列表
+        function renderTools() {
+            const toolsGrid = document.getElementById('toolsGrid');
+            const startIndex = (currentPage - 1) * toolsPerPage;
+            const endIndex = startIndex + toolsPerPage;
+            const currentTools = filteredTools.slice(startIndex, endIndex);
+
+            toolsGrid.innerHTML = currentTools.map(tool => `
+                <div class="tool-card">
+                    <h4>${tool.name}</h4>
+                    <p>${tool.desc}</p>
+                    <div class="tool-buttons">
+                        ${tool.type === 'download' 
+                            ? `<button class="btn-download" onclick="handleDownload(${tool.id})">点击获取</button>`
+                            : `<button class="btn-link" onclick="handleLink(${tool.id})">点击跳转</button>`
+                        }
+                        <button class="btn-tutorial" onclick="handleTutorial(${tool.id})">使用教程</button>
+                    </div>
+                </div>
+            `).join('');
+
+            // 渲染分页
+            renderPagination();
+        }
+
+        // 渲染分页
+        function renderPagination() {
+            const totalPages = Math.ceil(filteredTools.length / toolsPerPage);
+            const pagination = document.getElementById('pagination');
+
+            if (totalPages <= 1) {
+                pagination.innerHTML = '';
+                return;
+            }
+
+            let paginationHTML = '';
+
+            // 上一页
+            if (currentPage > 1) {
+                paginationHTML += `<button class="page-btn" onclick="changePage(${currentPage - 1})">上一页</button>`;
+            }
+
+            // 页码
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+                    paginationHTML += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">${i}</button>`;
+                } else if (i === currentPage - 2 || i === currentPage + 2) {
+                    paginationHTML += `<span style="padding: 10px;">...</span>`;
+                }
+            }
+
+            // 下一页
+            if (currentPage < totalPages) {
+                paginationHTML += `<button class="page-btn" onclick="changePage(${currentPage + 1})">下一页</button>`;
+            }
+
+            pagination.innerHTML = paginationHTML;
+        }
+
+        // 切换页码
+        function changePage(page) {
+            currentPage = page;
+            renderTools();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 搜索工具
+        document.getElementById('toolSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            filteredTools = toolsData.filter(tool => 
+                tool.name.toLowerCase().includes(searchTerm) || 
+                tool.desc.toLowerCase().includes(searchTerm)
+            );
+            currentPage = 1;
+            renderTools();
+        });
+
+        // 处理下载
+        function handleDownload(toolId) {
+            const tool = toolsData.find(t => t.id === toolId);
+            showToast(`正在下载：${tool.name}`);
+            // 实际项目中这里会触发真实的下载
+        }
+
+        // 处理跳转
+        function handleLink(toolId) {
+            const tool = toolsData.find(t => t.id === toolId);
+            if (tool.url) {
+                window.open(tool.url, '_blank');
+            } else {
+                showToast(`正在跳转到：${tool.name}`);
+            }
+        }
+
+        // 处理使用教程
+        function handleTutorial(toolId) {
+            const tool = toolsData.find(t => t.id === toolId);
+            showPage('contact');
+            // 可以在这里添加提示，引导用户留言获取教程
+            setTimeout(() => {
+                showToast(`请在留言中说明需要"${tool.name}"的使用教程`);
+            }, 500);
+        }
+
+        // 显示提示消息
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        // 表单提交
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            const wechat = document.getElementById('wechat').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // 验证至少填写一个联系方式
+            if (!wechat && !phone) {
+                e.preventDefault();
+                showToast('请至少填写微信号或手机号');
+                return;
+            }
+
+            // 验证手机号格式（如果填写了）
+            if (phone && !/^1[3-9]\d{9}$/.test(phone)) {
+                e.preventDefault();
+                showToast('请输入正确的手机号格式');
+                return;
+            }
+
+            // 如果验证通过，允许表单正常提交到 Netlify
+            // Netlify 会自动处理提交并重定向到成功页面
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = '提交中...';
+            
+            // 表单会正常提交，不需要阻止默认行为
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 初始化
+        if (window.location.hash) {
+            const pageId = window.location.hash.substring(1);
+            showPage(pageId);
+        }
+    </script>
+</body>
+</html>
+
