@@ -79,6 +79,8 @@ const form = ref({
 const isSubmitting = ref(false)
 
 const handleSubmit = async (e) => {
+  e.preventDefault()
+  
   const { wechat, phone, message } = form.value
 
   // 验证至少填写一个联系方式
@@ -98,12 +100,17 @@ const handleSubmit = async (e) => {
 
   // 使用 Netlify Forms 提交
   try {
-    const formData = new FormData(e.target)
+    // 构建表单数据，确保包含 form-name
+    const formData = new URLSearchParams()
+    formData.append('form-name', 'contact')
+    formData.append('wechat', wechat.trim())
+    formData.append('phone', phone.trim())
+    formData.append('message', message.trim())
     
     const response = await fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
+      body: formData.toString()
     })
 
     if (response.ok) {
@@ -114,9 +121,11 @@ const handleSubmit = async (e) => {
         message: ''
       }
     } else {
+      console.error('Form submission error:', response.status, response.statusText)
       showToast('提交失败，请稍后重试。')
     }
   } catch (error) {
+    console.error('Form submission error:', error)
     showToast('提交失败，请稍后重试。')
   } finally {
     isSubmitting.value = false
