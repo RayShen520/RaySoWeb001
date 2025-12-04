@@ -20,7 +20,6 @@
           :key="tool.id"
           class="tool-card"
         >
-          <div class="tool-icon" v-if="tool.icon">{{ tool.icon }}</div>
           <h4>{{ tool.name }}</h4>
           <p>{{ tool.desc }}</p>
           <div class="tool-buttons">
