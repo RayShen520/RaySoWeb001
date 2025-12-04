@@ -399,17 +399,102 @@ const comparisonData = [
 }
 
 @media (max-width: 768px) {
+    /* 区域 padding 优化 */
+    .products-section,
+    .comparison-section {
+        padding: 40px 20px;
+    }
+
+    /* 标题优化 */
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
     .product-detail {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 24px;
+        margin-bottom: 50px;
     }
 
     .product-detail.reverse {
         direction: ltr;
     }
 
+    .product-image {
+        height: 250px;
+        font-size: 60px;
+    }
+
+    .product-content h3 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .product-content p {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .product-features {
+        margin-top: 16px;
+    }
+
+    .product-features li {
+        padding: 8px 0;
+        font-size: 14px;
+        padding-left: 20px;
+    }
+
+    .product-specs {
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .specs-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
     .specs-grid {
         grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .spec-item {
+        padding: 6px 0;
+    }
+
+    .spec-label,
+    .spec-value {
+        font-size: 13px;
+    }
+
+    .product-scenarios {
+        margin-top: 20px;
+    }
+
+    .scenarios-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .scenarios-list {
+        gap: 8px;
+    }
+
+    .scenario-tag {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+
+    .product-cta {
+        margin-top: 20px;
+    }
+
+    .product-btn {
+        padding: 10px 24px;
+        font-size: 14px;
     }
 
     .comparison-table {
@@ -418,6 +503,12 @@ const comparisonData = [
 
     .comparison-table table {
         min-width: 600px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 12px 16px;
+        font-size: 14px;
     }
 }
 </style>

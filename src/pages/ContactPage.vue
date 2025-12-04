@@ -248,8 +248,60 @@ const handleSubmit = async (e) => {
 }
 
 @media (max-width: 768px) {
+    /* 区域 padding 优化 */
+    .contact-section {
+        padding: 40px 20px;
+    }
+
+    /* 标题优化 */
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
     .contact-form {
         padding: 24px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .form-group textarea {
+        min-height: 100px;
+    }
+
+    .form-note {
+        font-size: 12px;
+    }
+
+    .submit-btn {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .contact-info {
+        margin-top: 40px;
+    }
+
+    .contact-info h3 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
     }
 }
 </style>

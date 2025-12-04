@@ -346,8 +346,69 @@ const handleTutorial = (tool) => {
 }
 
 @media (max-width: 768px) {
+    /* 区域 padding 优化 */
+    .tools-section {
+        padding: 40px 20px;
+    }
+
+    /* 标题优化 */
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .tools-header {
+        margin-bottom: 30px;
+    }
+
+    .search-input {
+        padding: 12px 40px 12px 16px;
+        font-size: 14px;
+    }
+
+    .search-icon {
+        right: 16px;
+        font-size: 18px;
+    }
+
     .tools-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .tool-card {
+        padding: 20px;
+    }
+
+    .tool-card h4 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .tool-card p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .tool-buttons {
+        gap: 8px;
+    }
+
+    .btn-download,
+    .btn-link,
+    .btn-tutorial {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .pagination {
+        margin-top: 30px;
+        gap: 8px;
+    }
+
+    .page-btn {
+        padding: 8px 12px;
+        font-size: 13px;
     }
 }
 </style>

@@ -1324,12 +1324,19 @@
 
         /* 响应式 */
         @media (max-width: 768px) {
+            /* Hero 区域优化 */
+            .hero {
+                padding: 60px 20px;
+            }
+
             .hero h1 {
-                font-size: 36px;
+                font-size: 28px;
+                margin-bottom: 12px;
             }
 
             .hero p {
-                font-size: 18px;
+                font-size: 16px;
+                margin-bottom: 24px;
             }
 
             .nav-links {
@@ -1337,85 +1344,275 @@
                 font-size: 14px;
             }
 
-            .services-grid {
-                grid-template-columns: 1fr;
+            /* 区域 padding 优化 */
+            .stats-section,
+            .services,
+            .certifications-section,
+            .features-section,
+            .clients-section,
+            .testimonials-section,
+            .process-section,
+            .tech-section,
+            .cases-section,
+            .news-section,
+            .industries-section,
+            .awards-section,
+            .products-page,
+            .comparison-section,
+            .tools-page,
+            .contact-page {
+                padding: 40px 20px;
             }
 
+            /* 标题优化 */
+            .section-title {
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+
+            /* 统计数据区域 */
             .stats-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .stat-card {
+                padding: 24px 16px;
             }
 
             .stat-value {
-                font-size: 36px;
+                font-size: 28px;
             }
 
+            .stat-desc {
+                font-size: 12px;
+            }
+
+            /* 服务卡片 */
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .service-card {
+                padding: 24px;
+            }
+
+            .service-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            .service-card h3 {
+                font-size: 20px;
+            }
+
+            .service-card p {
+                font-size: 14px;
+            }
+
+            /* 认证资质 */
             .cert-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
+                gap: 16px;
             }
 
             .cert-item {
-                padding: 20px 15px;
+                padding: 20px 12px;
             }
 
+            .cert-badge {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            /* 优势特色 */
             .features-grid {
                 grid-template-columns: 1fr;
+                gap: 16px;
             }
 
-            .clients-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 20px;
+            .feature-item {
+                padding: 24px;
             }
 
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            .feature-icon {
+                font-size: 32px;
             }
 
-            .process-steps {
-                flex-direction: column;
-                gap: 40px;
-            }
-
-            .process-step::after {
-                display: none;
-            }
-
-            .tech-list {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .cases-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .news-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .industries-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .awards-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .joinus-content h2 {
-                font-size: 36px;
-            }
-
-            .joinus-content p {
+            .feature-item h3 {
                 font-size: 18px;
             }
 
+            .feature-item p {
+                font-size: 14px;
+            }
+
+            /* 客户案例 */
+            .clients-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+            }
+
+            .client-logo {
+                padding: 20px 12px;
+                height: 80px;
+                font-size: 16px;
+            }
+
+            /* 客户评价 */
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .testimonial-card {
+                padding: 24px;
+            }
+
+            .testimonial-content {
+                font-size: 14px;
+            }
+
+            .author-avatar {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            /* 服务流程 */
+            .process-steps {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .step-number {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            .step-title {
+                font-size: 16px;
+            }
+
+            .step-desc {
+                font-size: 13px;
+            }
+
+            /* 技术优势 */
+            .tech-list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .tech-item {
+                padding: 16px;
+            }
+
+            .tech-name {
+                font-size: 14px;
+            }
+
+            /* 成功案例 */
+            .cases-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .case-image {
+                height: 150px;
+                font-size: 36px;
+            }
+
+            .case-content {
+                padding: 20px;
+            }
+
+            /* 新闻动态 */
+            .news-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .news-content {
+                padding: 16px;
+            }
+
+            .news-title {
+                font-size: 16px;
+            }
+
+            .news-excerpt {
+                font-size: 13px;
+            }
+
+            /* 行业解决方案 */
+            .industries-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .industry-card {
+                padding: 24px;
+            }
+
+            /* 奖项荣誉 */
+            .awards-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .award-item {
+                padding: 20px 16px;
+            }
+
+            /* 加入我们 */
+            .joinus-content h2 {
+                font-size: 28px;
+            }
+
+            .joinus-content p {
+                font-size: 16px;
+            }
+
+            .joinus-button {
+                padding: 12px 32px;
+                font-size: 16px;
+            }
+
+            /* 产品页 */
             .product-detail {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 24px;
+                margin-bottom: 50px;
             }
 
             .product-detail:nth-child(even) {
                 direction: ltr;
+            }
+
+            .product-image {
+                height: 250px;
+                font-size: 60px;
+            }
+
+            .product-content h3 {
+                font-size: 24px;
+            }
+
+            .product-content p {
+                font-size: 16px;
+            }
+
+            .product-specs {
+                padding: 20px;
             }
 
             .specs-grid {
@@ -1430,12 +1627,50 @@
                 min-width: 600px;
             }
 
-            .tools-grid {
-                grid-template-columns: 1fr;
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px 16px;
+                font-size: 14px;
             }
 
+            /* 工具页 */
+            .tools-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .tool-card {
+                padding: 20px;
+            }
+
+            .tool-card h4 {
+                font-size: 18px;
+            }
+
+            .tool-card p {
+                font-size: 13px;
+            }
+
+            .tool-buttons {
+                gap: 8px;
+            }
+
+            .btn-download,
+            .btn-link,
+            .btn-tutorial {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+
+            /* 联系页 */
             .contact-form {
                 padding: 24px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 12px 14px;
+                font-size: 14px;
             }
         }
 
