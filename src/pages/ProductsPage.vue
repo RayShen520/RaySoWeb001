@@ -1,15 +1,16 @@
 <template>
   <div class="products-page">
+    <main>
     <section class="products-section">
-      <h2 class="section-title">产品与服务</h2>
+      <h1 class="section-title">瑞幻智能 - 产品与服务</h1>
       
-      <div 
+      <article 
         v-for="(product, index) in products" 
         :key="product.id"
         class="product-detail"
         :class="{ 'reverse': index % 2 === 1 }"
       >
-        <div class="product-image">{{ product.icon }}</div>
+        <div class="product-image" :aria-label="product.title + '产品图标'" role="img">{{ product.icon }}</div>
         <div class="product-content">
           <h3>{{ product.title }}</h3>
           <p>{{ product.description }}</p>
@@ -42,10 +43,10 @@
             </div>
           </div>
           <div class="product-cta">
-            <a href="#" @click.prevent="goToContact" class="product-btn">立即咨询</a>
+            <a href="#" @click.prevent="goToContact" class="product-btn" :aria-label="'咨询' + product.title + '服务'">立即咨询</a>
           </div>
         </div>
-      </div>
+      </article>
     </section>
 
     <!-- 产品对比区域 -->
@@ -75,13 +76,45 @@
         </table>
       </div>
     </section>
+    </main>
   </div>
 </template>
 
 <script setup>
-import { inject } from 'vue'
+import { inject, onMounted } from 'vue'
 
 const navigate = inject('navigate')
+
+// 添加面包屑导航结构化数据
+onMounted(() => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://rayso.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "产品服务",
+        "item": "https://rayso.ai/products"
+      }
+    ]
+  }
+  
+  let existingSchema = document.getElementById('products-breadcrumb-schema')
+  if (!existingSchema) {
+    const schemaScript = document.createElement('script')
+    schemaScript.type = 'application/ld+json'
+    schemaScript.id = 'products-breadcrumb-schema'
+    schemaScript.textContent = JSON.stringify(breadcrumbSchema)
+    document.head.appendChild(schemaScript)
+  }
+})
 
 const goToContact = () => {
   navigate('contact')
@@ -92,7 +125,7 @@ const products = [
     id: 1,
     icon: '🚀',
     title: 'AI全网营销',
-    description: '基于人工智能技术的全网营销解决方案，帮助企业实现精准营销、提升品牌影响力。通过智能分析和自动化工具，优化营销策略，提高转化率。',
+    description: '瑞幻智能基于人工智能技术的全网营销解决方案，帮助企业实现精准营销、提升品牌影响力。瑞幻智能通过智能分析和自动化工具，优化营销策略，提高转化率。',
     features: [
       '智能数据分析与用户画像',
       '自动化内容创作与发布',
@@ -111,7 +144,7 @@ const products = [
     id: 2,
     icon: '🤖',
     title: 'AI智能体应用',
-    description: '构建企业级AI智能体应用系统，实现业务流程自动化、智能决策支持。提供定制化的智能体解决方案，满足不同行业需求。',
+    description: '瑞幻智能构建企业级AI智能体应用系统，实现业务流程自动化、智能决策支持。瑞幻智能提供定制化的智能体解决方案，满足不同行业需求。',
     features: [
       '智能对话与客服系统',
       '业务流程自动化',
@@ -130,7 +163,7 @@ const products = [
     id: 3,
     icon: '⚙️',
     title: 'AI自动化开发',
-    description: '提供高效的AI自动化开发工具与服务，加速软件开发流程，降低开发成本。支持代码生成、测试自动化、部署自动化等功能。',
+    description: '瑞幻智能提供高效的AI自动化开发工具与服务，加速软件开发流程，降低开发成本。瑞幻智能支持代码生成、测试自动化、部署自动化等功能。',
     features: [
       '智能代码生成',
       '自动化测试框架',
@@ -149,7 +182,7 @@ const products = [
     id: 4,
     icon: '👁️',
     title: 'AI视觉检测',
-    description: '精准的AI视觉检测技术应用，适用于工业质检、安全监控、医疗影像等多个领域。提供高精度的图像识别与分析服务。',
+    description: '瑞幻智能提供精准的AI视觉检测技术应用，适用于工业质检、安全监控、医疗影像等多个领域。瑞幻智能提供高精度的图像识别与分析服务。',
     features: [
       '高精度图像识别',
       '实时检测与分析',

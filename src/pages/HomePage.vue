@@ -1,9 +1,10 @@
 <template>
   <div class="home-page">
+    <main>
     <section class="hero">
-      <h1>全球领先的AI智能解决方案提供商<sup style="font-size: 0.4em; vertical-align: super;">*</sup></h1>
-      <p>专注于AI全网营销、智能体应用、自动化开发与视觉检测的创新科技公司</p>
-      <a href="#" @click.prevent="goToContact" class="cta-button">立即咨询</a>
+      <h1>瑞幻智能 - 全球领先的AI智能解决方案提供商<sup style="font-size: 0.4em; vertical-align: super;">*</sup></h1>
+      <p>瑞幻智能专注于AI全网营销、智能体应用、自动化开发与视觉检测的创新科技公司</p>
+      <a href="#" @click.prevent="goToContact" class="cta-button" aria-label="立即咨询瑞幻智能AI智能解决方案">立即咨询</a>
     </section>
 
     <!-- 统计数据区域 -->
@@ -21,18 +22,18 @@
       </div>
     </section>
 
-    <section class="services">
+    <section class="services" aria-label="核心业务服务">
       <h2 class="section-title">核心业务</h2>
       <div class="services-grid">
-        <div 
+        <article 
           v-for="service in services" 
           :key="service.id"
           class="service-card"
         >
-          <div class="service-icon">{{ service.icon }}</div>
+          <div class="service-icon" :aria-label="service.title + '服务图标'">{{ service.icon }}</div>
           <h3>{{ service.title }}</h3>
           <p>{{ service.description }}</p>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -235,16 +236,84 @@
       <div class="joinus-content">
         <h2>加入我们</h2>
         <p>我们正在寻找对AI技术充满热情的优秀人才，一起推动人工智能技术的创新与发展</p>
-        <a href="#" @click.prevent="goToContact" class="joinus-button">立即加入</a>
+        <a href="#" @click.prevent="goToContact" class="joinus-button" aria-label="立即加入我们">立即加入</a>
       </div>
     </section>
+    </main>
   </div>
 </template>
 
 <script setup>
-import { inject } from 'vue'
+import { inject, onMounted } from 'vue'
 
 const navigate = inject('navigate')
+
+// 添加结构化数据
+onMounted(() => {
+  // 添加 Service 结构化数据
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI智能解决方案",
+      "provider": {
+        "@type": "Organization",
+        "name": "瑞幻智能",
+        "alternateName": "RaySo.AI"
+      },
+    "areaServed": {
+      "@type": "Country",
+      "name": "中国"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI智能解决方案服务",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI全网营销",
+            "description": "智能化的全网营销解决方案，提升品牌影响力"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI智能体应用",
+            "description": "构建智能化的AI智能体应用系统"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI自动化开发",
+            "description": "高效的AI自动化开发工具与服务"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI视觉检测",
+            "description": "精准的AI视觉检测技术应用"
+          }
+        }
+      ]
+    }
+  }
+  
+  // 检查是否已存在，避免重复添加
+  let existingSchema = document.getElementById('home-service-schema')
+  if (!existingSchema) {
+    const schemaScript = document.createElement('script')
+    schemaScript.type = 'application/ld+json'
+    schemaScript.id = 'home-service-schema'
+    schemaScript.textContent = JSON.stringify(serviceSchema)
+    document.head.appendChild(schemaScript)
+  }
+})
 
 const stats = [
   { id: 1, title: '企业客户', value: '120+', desc: '覆盖12个行业' },
@@ -254,10 +323,10 @@ const stats = [
 ]
 
 const services = [
-  { id: 1, icon: '🚀', title: 'AI全网营销', description: '智能化的全网营销解决方案，提升品牌影响力' },
-  { id: 2, icon: '🤖', title: 'AI智能体应用', description: '构建智能化的AI智能体应用系统' },
-  { id: 3, icon: '⚙️', title: 'AI自动化开发', description: '高效的AI自动化开发工具与服务' },
-  { id: 4, icon: '👁️', title: 'AI视觉检测', description: '精准的AI视觉检测技术应用' }
+  { id: 1, icon: '🚀', title: 'AI全网营销', description: '瑞幻智能提供智能化的全网营销解决方案，提升品牌影响力' },
+  { id: 2, icon: '🤖', title: 'AI智能体应用', description: '瑞幻智能构建智能化的AI智能体应用系统' },
+  { id: 3, icon: '⚙️', title: 'AI自动化开发', description: '瑞幻智能提供高效的AI自动化开发工具与服务' },
+  { id: 4, icon: '👁️', title: 'AI视觉检测', description: '瑞幻智能提供精准的AI视觉检测技术应用' }
 ]
 
 const certifications = [

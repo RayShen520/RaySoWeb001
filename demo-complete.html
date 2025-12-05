@@ -1,9 +1,123 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" itemscope itemtype="https://schema.org/WebSite">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
     <title>瑞幻智能 | RaySo.AI - 全球领先的AI智能解决方案提供商</title>
+    <meta name="description" content="瑞幻智能（RaySo.AI）专注于AI全网营销、AI智能体应用、AI自动化开发与AI视觉检测的创新科技公司。提供企业级AI解决方案，服务120+企业客户，覆盖12个行业。">
+    <meta name="keywords" content="AI智能解决方案,AI全网营销,AI智能体应用,AI自动化开发,AI视觉检测,人工智能,机器学习,深度学习,企业AI服务">
+    <meta name="author" content="瑞幻智能科技有限公司">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="zh-CN">
+    <meta name="geo.region" content="CN-FJ">
+    <meta name="geo.placename" content="漳州">
+    <link rel="canonical" href="https://rayso.ai/">
+    <link rel="alternate" hreflang="zh-CN" href="https://rayso.ai/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rayso.ai/">
+    <meta property="og:title" content="瑞幻智能 | RaySo.AI - 全球领先的AI智能解决方案提供商">
+    <meta property="og:description" content="专注于AI全网营销、AI智能体应用、AI自动化开发与AI视觉检测的创新科技公司">
+    <meta property="og:image" content="https://rayso.ai/og-image.jpg">
+    <meta property="og:site_name" content="瑞幻智能 | RaySo.AI">
+    <meta property="og:locale" content="zh_CN">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://rayso.ai/">
+    <meta name="twitter:title" content="瑞幻智能 | RaySo.AI - 全球领先的AI智能解决方案提供商">
+    <meta name="twitter:description" content="专注于AI全网营销、AI智能体应用、AI自动化开发与AI视觉检测的创新科技公司">
+    <meta name="twitter:image" content="https://rayso.ai/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Sitemap and Robots -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    
+    <!-- 结构化数据 - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "瑞幻智能科技有限公司",
+      "alternateName": "RaySo.AI",
+      "url": "https://rayso.ai",
+      "logo": "https://rayso.ai/logo.png",
+      "description": "全球领先的AI智能解决方案提供商，专注于AI全网营销、AI智能体应用、AI自动化开发与AI视觉检测",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "漳州",
+        "addressRegion": "福建",
+        "addressCountry": "CN",
+        "streetAddress": "厦门 | 漳州 | 深圳 | 苏州 | 香港 | 新加坡 | 马来西亚"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+86-xxx-xxxx-xxxx",
+        "contactType": "customer service",
+        "email": "zzrayhuan@163.com",
+        "availableLanguage": ["Chinese", "English"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/rayso-ai",
+        "https://twitter.com/rayso_ai"
+      ],
+      "foundingDate": "2020",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": "50-100"
+      }
+    }
+    </script>
+    
+    <!-- 结构化数据 - WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "瑞幻智能 | RaySo.AI",
+      "url": "https://rayso.ai",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://rayso.ai/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- 结构化数据 - BreadcrumbList (首页) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://rayso.ai/"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Markdown 解析库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 代码高亮库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -73,6 +187,81 @@
             width: 100%;
             height: 2px;
             background: #1D4ED8;
+        }
+
+        /* 汉堡菜单按钮 */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #1D1D1F;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* 移动端菜单 */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .mobile-menu-links a {
+            color: #1D1D1F;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: color 0.3s;
+        }
+
+        .mobile-menu-links a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu-links a:hover,
+        .mobile-menu-links a.active {
+            color: #1D4ED8;
         }
 
         /* 页面容器 */
@@ -1349,6 +1538,364 @@
             cursor: not-allowed;
         }
 
+        /* 博客列表页 */
+        .blog-page {
+            padding: 100px 40px;
+            background: #FFFFFF;
+            min-height: calc(100vh - 80px);
+            margin-top: 80px;
+        }
+
+        .blog-filters {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .blog-filters .search-box {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .blog-filters .search-input {
+            width: 100%;
+            padding: 16px 50px 16px 20px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            font-size: 16px;
+            background: #FFFFFF;
+            transition: border-color 0.3s;
+        }
+
+        .blog-filters .search-input:focus {
+            outline: none;
+            border-color: #1D4ED8;
+        }
+
+        .blog-filters .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6E6E73;
+            font-size: 20px;
+            pointer-events: none;
+        }
+
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            background: #FFFFFF;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #1D1D1F;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover {
+            border-color: #1D4ED8;
+            color: #1D4ED8;
+        }
+
+        .filter-btn.active {
+            background: #1D4ED8;
+            color: #FFFFFF;
+            border-color: #1D4ED8;
+        }
+
+        .blog-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-card-header {
+            padding: 24px 24px 16px;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: #1D4ED8;
+            color: #FFFFFF;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .blog-card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1D1D1F;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .blog-card-excerpt {
+            font-size: 14px;
+            color: #6E6E73;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-card-footer {
+            padding: 16px 24px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .blog-card-date {
+            font-size: 12px;
+            color: #6E6E73;
+        }
+
+        .blog-card-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .blog-tag {
+            font-size: 11px;
+            color: #1D4ED8;
+            background: rgba(29, 78, 216, 0.1);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        /* 博客详情页 */
+        .blog-detail-page {
+            padding: 100px 40px;
+            background: #FFFFFF;
+            min-height: calc(100vh - 80px);
+            margin-top: 80px;
+        }
+
+        .blog-detail-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #F5F5F7;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #1D1D1F;
+            cursor: pointer;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #E5E5E7;
+            color: #1D4ED8;
+        }
+
+        .blog-article {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .article-header {
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #1D4ED8;
+            color: #FFFFFF;
+            padding: 6px 16px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .article-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1D1D1F;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 14px;
+            color: #6E6E73;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .article-tag {
+            font-size: 12px;
+            color: #1D4ED8;
+            background: rgba(29, 78, 216, 0.1);
+            padding: 4px 12px;
+            border-radius: 12px;
+        }
+
+        .article-content {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #1D1D1F;
+        }
+
+        .article-content h1,
+        .article-content h2,
+        .article-content h3,
+        .article-content h4 {
+            margin-top: 32px;
+            margin-bottom: 16px;
+            color: #1D1D1F;
+            font-weight: 600;
+        }
+
+        .article-content h1 {
+            font-size: 28px;
+        }
+
+        .article-content h2 {
+            font-size: 24px;
+        }
+
+        .article-content h3 {
+            font-size: 20px;
+        }
+
+        .article-content p {
+            margin-bottom: 16px;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        .article-content li {
+            margin-bottom: 8px;
+        }
+
+        .article-content code {
+            background: #F5F5F7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: 'Courier New', monospace;
+            color: #E83E8C;
+        }
+
+        .article-content pre {
+            background: #F5F5F7;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        .article-content pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 14px;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid #1D4ED8;
+            padding-left: 20px;
+            margin: 20px 0;
+            color: #6E6E73;
+            font-style: italic;
+        }
+
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .article-content table th,
+        .article-content table td {
+            border: 1px solid #E5E5E7;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .article-content table th {
+            background: #F5F5F7;
+            font-weight: 600;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .article-content a {
+            color: #1D4ED8;
+            text-decoration: none;
+        }
+
+        .article-content a:hover {
+            text-decoration: underline;
+        }
 
         /* 页脚 */
         .footer {
@@ -1400,9 +1947,28 @@
                 margin-bottom: 24px;
             }
 
+            /* 导航栏移动端优化 */
+            .navbar {
+                padding: 12px 20px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            /* 隐藏桌面端导航链接 */
             .nav-links {
-                gap: 20px;
-                font-size: 14px;
+                display: none;
+            }
+
+            /* 显示汉堡菜单按钮 */
+            .menu-toggle {
+                display: flex;
+            }
+
+            /* 显示移动端菜单 */
+            .mobile-menu {
+                display: block;
             }
 
             /* 区域 padding 优化 */
@@ -1777,6 +2343,52 @@
                 padding: 12px 14px;
                 font-size: 14px;
             }
+
+            /* 博客页 */
+            .blog-page {
+                padding: 40px 20px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .blog-card-header {
+                padding: 20px;
+            }
+
+            .blog-card-title {
+                font-size: 18px;
+            }
+
+            .blog-detail-page {
+                padding: 40px 20px;
+            }
+
+            .blog-article {
+                padding: 24px;
+            }
+
+            .article-title {
+                font-size: 24px;
+            }
+
+            .article-content {
+                font-size: 14px;
+            }
+
+            .article-content h1 {
+                font-size: 22px;
+            }
+
+            .article-content h2 {
+                font-size: 20px;
+            }
+
+            .article-content h3 {
+                font-size: 18px;
+            }
         }
 
         .toast {
@@ -1806,22 +2418,95 @@
 </head>
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar" id="navbar">
-        <div class="logo" onclick="showPage('home')">瑞幻智能 | RaySo.AI</div>
-        <div class="nav-links">
-            <a href="#" onclick="showPage('home'); return false;" class="active" data-page="home">首页</a>
-            <a href="#" onclick="showPage('products'); return false;" data-page="products">产品服务</a>
-            <a href="#" onclick="showPage('tools'); return false;" data-page="tools">AI工具合集</a>
-            <a href="#" onclick="showPage('contact'); return false;" data-page="contact">联系我们</a>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="主导航">
+        <div class="logo" onclick="showPage('home')" role="banner" aria-label="瑞幻智能网站首页">瑞幻智能 | RaySo.AI</div>
+        <div class="nav-links" role="menubar">
+            <a href="#" onclick="showPage('home'); return false;" class="active" data-page="home" role="menuitem" aria-label="访问首页">首页</a>
+            <a href="#" onclick="showPage('products'); return false;" data-page="products" role="menuitem" aria-label="查看产品服务">产品服务</a>
+            <a href="#" onclick="showPage('tools'); return false;" data-page="tools" role="menuitem" aria-label="浏览AI工具合集">AI工具合集</a>
+            <a href="#" onclick="showPage('blog'); return false;" data-page="blog" role="menuitem" aria-label="阅读博客教程">博客/教程</a>
+            <a href="#" onclick="showPage('contact'); return false;" data-page="contact" role="menuitem" aria-label="联系我们">联系我们</a>
+        </div>
+        <div class="menu-toggle" id="menuToggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </nav>
 
+    <!-- 移动端菜单 -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-links">
+            <a href="#" onclick="showPage('home'); toggleMobileMenu(); return false;" data-page="home">首页</a>
+            <a href="#" onclick="showPage('products'); toggleMobileMenu(); return false;" data-page="products">产品服务</a>
+            <a href="#" onclick="showPage('tools'); toggleMobileMenu(); return false;" data-page="tools">AI工具合集</a>
+            <a href="#" onclick="showPage('blog'); toggleMobileMenu(); return false;" data-page="blog">博客/教程</a>
+            <a href="#" onclick="showPage('contact'); toggleMobileMenu(); return false;" data-page="contact">联系我们</a>
+        </div>
+    </div>
+
     <!-- 首页 -->
     <div class="page active" id="home-page">
+        <!-- 结构化数据 - Service -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "AI智能解决方案",
+          "provider": {
+            "@type": "Organization",
+            "name": "瑞幻智能科技有限公司"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "中国"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "AI智能解决方案服务",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI全网营销",
+                  "description": "智能化的全网营销解决方案，提升品牌影响力"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI智能体应用",
+                  "description": "构建智能化的AI智能体应用系统"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI自动化开发",
+                  "description": "高效的AI自动化开发工具与服务"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI视觉检测",
+                  "description": "精准的AI视觉检测技术应用"
+                }
+              }
+            ]
+          }
+        }
+        </script>
+        
+        <main>
         <section class="hero">
             <h1>全球领先的AI智能解决方案提供商<sup style="font-size: 0.4em; vertical-align: super;">*</sup></h1>
             <p>专注于AI全网营销、智能体应用、自动化开发与视觉检测的创新科技公司</p>
-            <a href="#" onclick="showPage('contact'); return false;" class="cta-button">立即咨询</a>
+            <a href="#" onclick="showPage('contact'); return false;" class="cta-button" aria-label="立即咨询联系我们">立即咨询</a>
         </section>
 
         <!-- 统计数据区域 -->
@@ -1850,29 +2535,29 @@
             </div>
         </section>
 
-        <section class="services">
+        <section class="services" aria-label="核心业务服务">
             <h2 class="section-title">核心业务</h2>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🚀</div>
+                <article class="service-card">
+                    <div class="service-icon" aria-label="AI全网营销服务图标">🚀</div>
                     <h3>AI全网营销</h3>
                     <p>智能化的全网营销解决方案，提升品牌影响力</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🤖</div>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-label="AI智能体应用服务图标">🤖</div>
                     <h3>AI智能体应用</h3>
                     <p>构建智能化的AI智能体应用系统</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚙️</div>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-label="AI自动化开发服务图标">⚙️</div>
                     <h3>AI自动化开发</h3>
                     <p>高效的AI自动化开发工具与服务</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">👁️</div>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon" aria-label="AI视觉检测服务图标">👁️</div>
                     <h3>AI视觉检测</h3>
                     <p>精准的AI视觉检测技术应用</p>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -1951,15 +2636,15 @@
         </section>
 
         <!-- 客户案例区域 -->
-        <section class="clients-section">
+        <section class="clients-section" aria-label="合作伙伴">
             <h2 class="section-title">合作伙伴</h2>
             <div class="clients-grid">
-                <div class="client-logo">华为</div>
-                <div class="client-logo">腾讯</div>
-                <div class="client-logo">阿里巴巴</div>
-                <div class="client-logo">字节跳动</div>
-                <div class="client-logo">京东</div>
-                <div class="client-logo">小米</div>
+                <div class="client-logo" aria-label="华为合作伙伴">华为</div>
+                <div class="client-logo" aria-label="腾讯合作伙伴">腾讯</div>
+                <div class="client-logo" aria-label="阿里巴巴合作伙伴">阿里巴巴</div>
+                <div class="client-logo" aria-label="字节跳动合作伙伴">字节跳动</div>
+                <div class="client-logo" aria-label="京东合作伙伴">京东</div>
+                <div class="client-logo" aria-label="小米合作伙伴">小米</div>
             </div>
         </section>
 
@@ -2061,11 +2746,11 @@
         </section>
 
         <!-- 成功案例区域 -->
-        <section class="cases-section">
+        <section class="cases-section" aria-label="成功案例">
             <h2 class="section-title">成功案例</h2>
             <div class="cases-grid">
-                <div class="case-card">
-                    <div class="case-image">🏢</div>
+                <article class="case-card">
+                    <div class="case-image" aria-label="金融行业案例图标">🏢</div>
                     <div class="case-content">
                         <span class="case-tag">金融行业</span>
                         <h3 class="case-title">中国工商银行智能客服系统</h3>
@@ -2081,9 +2766,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="case-card">
-                    <div class="case-image">🏭</div>
+                </article>
+                <article class="case-card">
+                    <div class="case-image" aria-label="制造业案例图标">🏭</div>
                     <div class="case-content">
                         <span class="case-tag">制造业</span>
                         <h3 class="case-title">比亚迪智能制造视觉检测平台</h3>
@@ -2099,9 +2784,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="case-card">
-                    <div class="case-image">🛒</div>
+                </article>
+                <article class="case-card">
+                    <div class="case-image" aria-label="电商行业案例图标">🛒</div>
                     <div class="case-content">
                         <span class="case-tag">电商行业</span>
                         <h3 class="case-title">京东商城AI营销解决方案</h3>
@@ -2117,75 +2802,79 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
         <!-- 新闻动态区域 -->
-        <section class="news-section">
+        <section class="news-section" aria-label="最新动态">
             <h2 class="section-title">最新动态</h2>
             <div class="news-grid">
-                <div class="news-card">
+                <article class="news-card">
                     <div class="news-date">2024-12-04</div>
                     <div class="news-content">
                         <h3 class="news-title">瑞幻智能荣获"2024年度AI创新企业"大奖</h3>
                         <p class="news-excerpt">在2024年度AI创新峰会上，瑞幻智能凭借在AI智能体应用领域的卓越表现，荣获"年度AI创新企业"称号...</p>
-                        <a href="#" class="news-link">了解更多 →</a>
+                        <a href="#" class="news-link" aria-label="了解更多关于2024年度AI创新企业大奖的信息">了解更多 →</a>
                     </div>
-                </div>
-                <div class="news-card">
+                </article>
+                <article class="news-card">
                     <div class="news-date">2024-11-28</div>
                     <div class="news-content">
                         <h3 class="news-title">全新AI自动化开发平台正式上线</h3>
                         <p class="news-excerpt">经过6个月的研发和测试，瑞幻智能全新AI自动化开发平台正式上线，支持多种编程语言和框架...</p>
-                        <a href="#" class="news-link">了解更多 →</a>
+                        <a href="#" class="news-link" aria-label="了解更多关于AI自动化开发平台的信息">了解更多 →</a>
                     </div>
-                </div>
-                <div class="news-card">
+                </article>
+                <article class="news-card">
                     <div class="news-date">2024-11-15</div>
                     <div class="news-content">
                         <h3 class="news-title">与华为云达成战略合作，共建AI生态</h3>
                         <p class="news-excerpt">瑞幻智能与华为云签署战略合作协议，双方将在AI技术、云计算服务等领域展开深度合作...</p>
-                        <a href="#" class="news-link">了解更多 →</a>
+                        <a href="#" class="news-link" aria-label="了解更多关于与华为云战略合作的信息">了解更多 →</a>
                     </div>
-                </div>
+                </article>
+            </div>
+        </section>
+                    </div>
+                </article>
             </div>
         </section>
 
         <!-- 行业解决方案区域 -->
-        <section class="industries-section">
+        <section class="industries-section" aria-label="行业解决方案">
             <h2 class="section-title">行业解决方案</h2>
             <div class="industries-grid">
-                <div class="industry-card">
-                    <div class="industry-icon">🏦</div>
+                <article class="industry-card">
+                    <div class="industry-icon" aria-label="金融科技行业解决方案图标">🏦</div>
                     <h3 class="industry-name">金融科技</h3>
                     <p class="industry-desc">智能风控、反欺诈、智能投顾等金融AI解决方案</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">🏥</div>
+                </article>
+                <article class="industry-card">
+                    <div class="industry-icon" aria-label="医疗健康行业解决方案图标">🏥</div>
                     <h3 class="industry-name">医疗健康</h3>
                     <p class="industry-desc">医学影像分析、智能诊断、健康管理等AI应用</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">🏭</div>
+                </article>
+                <article class="industry-card">
+                    <div class="industry-icon" aria-label="智能制造行业解决方案图标">🏭</div>
                     <h3 class="industry-name">智能制造</h3>
                     <p class="industry-desc">工业视觉检测、预测性维护、质量管控系统</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">🛒</div>
+                </article>
+                <article class="industry-card">
+                    <div class="industry-icon" aria-label="零售电商行业解决方案图标">🛒</div>
                     <h3 class="industry-name">零售电商</h3>
                     <p class="industry-desc">智能推荐、精准营销、供应链优化解决方案</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">🎓</div>
+                </article>
+                <article class="industry-card">
+                    <div class="industry-icon" aria-label="教育培训行业解决方案图标">🎓</div>
                     <h3 class="industry-name">教育培训</h3>
                     <p class="industry-desc">智能教学、个性化学习、知识图谱构建</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">🚗</div>
+                </article>
+                <article class="industry-card">
+                    <div class="industry-icon" aria-label="智慧交通行业解决方案图标">🚗</div>
                     <h3 class="industry-name">智慧交通</h3>
                     <p class="industry-desc">智能调度、路况预测、自动驾驶技术支持</p>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -2254,9 +2943,10 @@
             <div class="joinus-content">
                 <h2>加入我们</h2>
                 <p>我们正在寻找对AI技术充满热情的优秀人才，一起推动人工智能技术的创新与发展</p>
-                <a href="#" onclick="showPage('contact'); return false;" class="joinus-button">立即加入</a>
+                <a href="#" onclick="showPage('contact'); return false;" class="joinus-button" aria-label="立即加入我们">立即加入</a>
             </div>
         </section>
+        </main>
     </div>
 
     <!-- 产品服务页 -->
@@ -2265,7 +2955,7 @@
             <h2 class="section-title">产品与服务</h2>
             
             <div class="product-detail">
-                <div class="product-image">🚀</div>
+                <div class="product-image" aria-label="AI全网营销产品图标" role="img">🚀</div>
                 <div class="product-content">
                     <h3>AI全网营销</h3>
                     <p>基于人工智能技术的全网营销解决方案，帮助企业实现精准营销、提升品牌影响力。通过智能分析和自动化工具，优化营销策略，提高转化率。</p>
@@ -2306,13 +2996,13 @@
                         </div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" onclick="showPage('contact'); return false;" class="product-btn">立即咨询</a>
+                        <a href="#" onclick="showPage('contact'); return false;" class="product-btn" aria-label="咨询AI视觉检测服务">立即咨询</a>
                     </div>
                 </div>
             </div>
 
             <div class="product-detail">
-                <div class="product-image">🤖</div>
+                <div class="product-image" aria-label="AI智能体应用产品图标" role="img">🤖</div>
                 <div class="product-content">
                     <h3>AI智能体应用</h3>
                     <p>构建企业级AI智能体应用系统，实现业务流程自动化、智能决策支持。提供定制化的智能体解决方案，满足不同行业需求。</p>
@@ -2353,13 +3043,13 @@
                         </div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" onclick="showPage('contact'); return false;" class="product-btn">立即咨询</a>
+                        <a href="#" onclick="showPage('contact'); return false;" class="product-btn" aria-label="咨询AI智能体应用服务">立即咨询</a>
                     </div>
                 </div>
             </div>
 
             <div class="product-detail">
-                <div class="product-image">⚙️</div>
+                <div class="product-image" aria-label="AI自动化开发产品图标" role="img">⚙️</div>
                 <div class="product-content">
                     <h3>AI自动化开发</h3>
                     <p>提供高效的AI自动化开发工具与服务，加速软件开发流程，降低开发成本。支持代码生成、测试自动化、部署自动化等功能。</p>
@@ -2400,13 +3090,13 @@
                         </div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" onclick="showPage('contact'); return false;" class="product-btn">立即咨询</a>
+                        <a href="#" onclick="showPage('contact'); return false;" class="product-btn" aria-label="咨询AI自动化开发服务">立即咨询</a>
                     </div>
                 </div>
             </div>
 
             <div class="product-detail">
-                <div class="product-image">👁️</div>
+                <div class="product-image" aria-label="AI视觉检测产品图标" role="img">👁️</div>
                 <div class="product-content">
                     <h3>AI视觉检测</h3>
                     <p>精准的AI视觉检测技术应用，适用于工业质检、安全监控、医疗影像等多个领域。提供高精度的图像识别与分析服务。</p>
@@ -2447,7 +3137,7 @@
                         </div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" onclick="showPage('contact'); return false;" class="product-btn">立即咨询</a>
+                        <a href="#" onclick="showPage('contact'); return false;" class="product-btn" aria-label="咨询AI视觉检测服务">立即咨询</a>
                     </div>
                 </div>
             </div>
@@ -2513,10 +3203,34 @@
                 </table>
             </div>
         </section>
+        </main>
     </div>
 
     <!-- 工具下载页 -->
     <div class="page" id="tools-page">
+        <!-- 面包屑导航结构化数据 -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://rayso.ai/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "AI工具合集",
+              "item": "https://rayso.ai/tools"
+            }
+          ]
+        }
+        </script>
+        
+        <main>
         <section class="tools-page">
             <div class="tools-header">
                 <h2 class="section-title">AI工具合集</h2>
@@ -2534,10 +3248,34 @@
                 <!-- 分页按钮将通过JavaScript动态生成 -->
             </div>
         </section>
+        </main>
     </div>
 
     <!-- 联系我们页 -->
     <div class="page" id="contact-page">
+        <!-- 面包屑导航结构化数据 -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://rayso.ai/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "联系我们",
+              "item": "https://rayso.ai/contact"
+            }
+          ]
+        }
+        </script>
+        
+        <main>
         <section class="contact-page">
             <h2 class="section-title">联系我们</h2>
             <div class="contact-container">
@@ -2547,17 +3285,17 @@
                         <div class="info-card">
                             <div class="info-icon">📧</div>
                             <h3>邮箱联系</h3>
-                            <p>contact@rayso.ai</p>
+                            <p>zzrayhuan@163.com</p>
                         </div>
                         <div class="info-card">
                             <div class="info-icon">📱</div>
                             <h3>微信咨询</h3>
-                            <p>扫描二维码或填写表单</p>
+                            <p>rayhuan520</p>
                         </div>
                         <div class="info-card">
                             <div class="info-icon">📍</div>
                             <h3>公司地址</h3>
-                            <p>福建省漳州市高新区</p>
+                            <p>厦门 | 漳州 | 深圳 | 苏州 | 香港 | 新加坡 | 马来西亚</p>
                         </div>
                         <div class="info-card">
                             <div class="info-icon">⏰</div>
@@ -2606,12 +3344,116 @@
                 </div>
             </div>
         </section>
+        </main>
+    </div>
+
+    <!-- 博客列表页 -->
+    <div class="page" id="blog-page">
+        <!-- 面包屑导航结构化数据 -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://rayso.ai/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "博客/教程",
+              "item": "https://rayso.ai/blog"
+            }
+          ]
+        }
+        </script>
+        
+        <main>
+        <section class="blog-page">
+            <h2 class="section-title">博客与教程</h2>
+            
+            <!-- 搜索和筛选 -->
+            <div class="blog-filters">
+                <div class="search-box">
+                    <input type="text" class="search-input" id="blogSearch" placeholder="搜索文章标题或内容...">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all" onclick="filterByCategory('all')">全部</button>
+                    <button class="filter-btn" data-category="技术教程" onclick="filterByCategory('技术教程')">技术教程</button>
+                    <button class="filter-btn" data-category="科普文章" onclick="filterByCategory('科普文章')">科普文章</button>
+                    <button class="filter-btn" data-category="行业动态" onclick="filterByCategory('行业动态')">行业动态</button>
+                    <button class="filter-btn" data-category="产品更新" onclick="filterByCategory('产品更新')">产品更新</button>
+                </div>
+            </div>
+
+            <!-- 文章列表 -->
+            <div class="blog-grid" id="blogGrid">
+                <!-- 文章卡片将通过JavaScript动态生成 -->
+            </div>
+
+            <!-- 分页 -->
+            <div class="pagination" id="blogPagination">
+                <!-- 分页按钮将通过JavaScript动态生成 -->
+            </div>
+        </section>
+        </main>
+    </div>
+
+    <!-- 博客详情页 -->
+    <div class="page" id="blog-detail-page">
+        <!-- 面包屑导航结构化数据（动态更新） -->
+        <script type="application/ld+json" id="blog-detail-breadcrumb">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://rayso.ai/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "博客/教程",
+              "item": "https://rayso.ai/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "文章详情",
+              "item": "https://rayso.ai/blog/detail"
+            }
+          ]
+        }
+        </script>
+        
+        <main>
+        <section class="blog-detail-page">
+            <div class="blog-detail-container">
+                <button class="back-btn" onclick="showPage('blog')" aria-label="返回博客列表">← 返回列表</button>
+                <article class="blog-article" id="blogArticle" itemscope itemtype="https://schema.org/BlogPosting">
+                    <!-- 文章内容将通过JavaScript动态生成 -->
+                </article>
+            </div>
+        </section>
+        </main>
     </div>
 
     <!-- 页脚 -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <p>漳州高新区瑞幻智能科技有限公司</p>
         <p>&copy; 2024 瑞幻智能. All rights reserved.</p>
+        <nav aria-label="页脚导航" style="margin-top: 20px;">
+            <a href="/sitemap.xml" style="color: #6E6E73; text-decoration: none; margin: 0 10px; font-size: 14px;">网站地图</a>
+            <a href="/robots.txt" style="color: #6E6E73; text-decoration: none; margin: 0 10px; font-size: 14px;">Robots.txt</a>
+            <a href="#" onclick="showPage('contact'); return false;" style="color: #6E6E73; text-decoration: none; margin: 0 10px; font-size: 14px;">联系我们</a>
+        </nav>
         <p class="footer-note">*基于公司技术实力与发展愿景的目标定位</p>
         <p class="footer-note">*以上数据和内容均由AI生成，供测试使用。</p>
     </footer>
@@ -2642,6 +3484,973 @@
             { id: 21, name: '图像处理工具', desc: '智能图像编辑与优化', type: 'link', icon: '🖼️', tutorialUrl: '' },
         ];
 
+        // 博客文章数据
+        const blogArticles = [
+            {
+                id: 1,
+                title: '从零开始构建AI智能体应用：完整开发指南',
+                category: '技术教程',
+                date: '2024-12-10',
+                author: '技术团队',
+                tags: ['AI', '智能体', '开发教程', 'Python'],
+                excerpt: '本文将详细介绍如何使用Python和主流AI框架从零开始构建一个完整的智能体应用，包括环境搭建、模型选择、API集成等核心步骤。',
+                content: `# 从零开始构建AI智能体应用：完整开发指南
+
+## 引言
+
+AI智能体（AI Agent）是当前人工智能领域的热门话题。本文将带你从零开始，构建一个完整的AI智能体应用。
+
+## 环境准备
+
+### 1. Python环境配置
+
+首先，我们需要安装Python 3.8或更高版本：
+
+\`\`\`bash
+# 检查Python版本
+python --version
+
+# 创建虚拟环境
+python -m venv venv
+
+# 激活虚拟环境（Windows）
+venv\\Scripts\\activate
+
+# 激活虚拟环境（Linux/Mac）
+source venv/bin/activate
+\`\`\`
+
+### 2. 安装必要的库
+
+\`\`\`bash
+pip install openai langchain streamlit
+\`\`\`
+
+## 核心代码实现
+
+### 基础智能体类
+
+\`\`\`python
+from langchain.agents import initialize_agent, AgentType
+from langchain.llms import OpenAI
+
+class SimpleAgent:
+    def __init__(self, api_key):
+        self.llm = OpenAI(temperature=0, openai_api_key=api_key)
+        self.agent = initialize_agent(
+            tools=[],
+            llm=self.llm,
+            agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+            verbose=True
+        )
+    
+    def run(self, query):
+        return self.agent.run(query)
+\`\`\`
+
+## 功能特性
+
+| 功能 | 描述 | 状态 |
+|------|------|------|
+| 对话能力 | 支持多轮对话 | ✅ |
+| 工具调用 | 可调用外部API | ✅ |
+| 记忆功能 | 上下文记忆 | ✅ |
+
+## 总结
+
+通过本文的学习，你已经掌握了构建AI智能体应用的基础知识。接下来可以尝试添加更多功能，如：
+
+- 多模态支持
+- 知识库集成
+- 自定义工具开发
+
+希望这篇文章对你有帮助！`
+            },
+            {
+                id: 2,
+                title: 'AI视觉检测技术原理与应用实践',
+                category: '技术教程',
+                date: '2024-12-08',
+                author: '技术团队',
+                tags: ['计算机视觉', '深度学习', 'YOLO', '检测算法'],
+                excerpt: '深入解析AI视觉检测的核心技术原理，包括YOLO、R-CNN等主流算法，并通过实际案例展示如何应用到工业质检场景。',
+                content: `# AI视觉检测技术原理与应用实践
+
+## 技术概述
+
+AI视觉检测是计算机视觉领域的重要应用，广泛应用于工业质检、安防监控、医疗影像等领域。
+
+## 核心算法
+
+### 1. YOLO算法
+
+YOLO（You Only Look Once）是一种实时目标检测算法，具有速度快、精度高的特点。
+
+\`\`\`python
+import torch
+from ultralytics import YOLO
+
+# 加载预训练模型
+model = YOLO('yolov8n.pt')
+
+# 进行检测
+results = model('image.jpg')
+
+# 处理结果
+for result in results:
+    boxes = result.boxes
+    for box in boxes:
+        print(f"检测到: {box.cls}, 置信度: {box.conf}")
+\`\`\`
+
+### 2. R-CNN系列
+
+R-CNN、Fast R-CNN、Faster R-CNN是两阶段检测算法的代表。
+
+## 性能对比
+
+| 算法 | mAP | FPS | 特点 |
+|------|-----|-----|------|
+| YOLOv8 | 53.9 | 80 | 速度快 |
+| Faster R-CNN | 42.0 | 5 | 精度高 |
+| RetinaNet | 40.8 | 11 | 平衡 |
+
+## 应用案例
+
+### 工业质检
+
+在制造业中，AI视觉检测可以：
+
+1. **缺陷检测**：识别产品表面缺陷
+2. **尺寸测量**：精确测量产品尺寸
+3. **分类识别**：自动分类产品类型
+
+## 最佳实践
+
+> **提示**：在实际应用中，建议使用数据增强技术来提高模型的泛化能力。
+
+## 总结
+
+AI视觉检测技术正在改变传统制造业，通过本文的学习，你应该对相关技术有了更深入的理解。`
+            },
+            {
+                id: 3,
+                title: '大语言模型（LLM）微调实战教程',
+                category: '技术教程',
+                date: '2024-12-05',
+                author: '技术团队',
+                tags: ['LLM', '微调', 'Fine-tuning', 'Transformer'],
+                excerpt: '手把手教你如何对开源大语言模型进行微调，包括数据准备、训练配置、模型评估等完整流程，适合有一定基础的开发者。',
+                content: `# 大语言模型（LLM）微调实战教程
+
+## 什么是模型微调？
+
+模型微调（Fine-tuning）是在预训练模型的基础上，使用特定领域的数据进行进一步训练，使模型适应特定任务。
+
+## 准备工作
+
+### 数据格式
+
+训练数据需要是JSON格式：
+
+\`\`\`json
+[
+    {
+        "instruction": "解释什么是AI",
+        "input": "",
+        "output": "AI是人工智能的缩写..."
+    }
+]
+\`\`\`
+
+### 环境配置
+
+\`\`\`bash
+pip install transformers datasets accelerate peft
+\`\`\`
+
+## 微调代码
+
+\`\`\`python
+from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments, Trainer
+from datasets import load_dataset
+
+# 加载模型和分词器
+model = AutoModelForCausalLM.from_pretrained("model_name")
+tokenizer = AutoTokenizer.from_pretrained("model_name")
+
+# 加载数据集
+dataset = load_dataset("json", data_files="train.json")
+
+# 训练参数
+training_args = TrainingArguments(
+    output_dir="./results",
+    num_train_epochs=3,
+    per_device_train_batch_size=4,
+    learning_rate=2e-5,
+)
+
+# 创建训练器
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=dataset,
+)
+
+# 开始训练
+trainer.train()
+\`\`\`
+
+## 训练技巧
+
+1. **学习率设置**：建议从2e-5开始
+2. **批次大小**：根据GPU内存调整
+3. **训练轮数**：3-5轮通常足够
+
+## 总结
+
+通过微调，可以让通用模型适应你的特定需求，这是AI应用开发的重要技能。`
+            },
+            {
+                id: 4,
+                title: '什么是生成式AI？一文读懂ChatGPT背后的技术',
+                category: '科普文章',
+                date: '2024-12-12',
+                author: '产品团队',
+                tags: ['生成式AI', 'ChatGPT', '科普', '技术原理'],
+                excerpt: '用通俗易懂的方式解释生成式AI的工作原理，包括Transformer架构、注意力机制等核心概念，适合非技术背景的读者。',
+                content: `# 什么是生成式AI？一文读懂ChatGPT背后的技术
+
+## 什么是生成式AI？
+
+生成式AI（Generative AI）是一种能够创造新内容的人工智能技术，它可以生成文本、图像、音频等多种形式的内容。
+
+## 核心原理
+
+### Transformer架构
+
+Transformer是生成式AI的核心架构，它使用**注意力机制**（Attention Mechanism）来处理序列数据。
+
+### 工作流程
+
+1. **输入处理**：将文本转换为数字向量
+2. **特征提取**：通过多层神经网络提取特征
+3. **内容生成**：根据上下文生成下一个词
+4. **输出解码**：将向量转换回文本
+
+## 常见应用
+
+| 应用类型 | 示例 | 说明 |
+|---------|------|------|
+| 文本生成 | ChatGPT | 对话、写作 |
+| 图像生成 | Midjourney | 艺术创作 |
+| 代码生成 | GitHub Copilot | 编程辅助 |
+
+## 技术优势
+
+- ✅ **理解能力强**：能理解复杂语义
+- ✅ **生成质量高**：内容自然流畅
+- ✅ **应用范围广**：适用于多种场景
+
+## 未来展望
+
+> 生成式AI正在改变我们的工作方式，未来将更加智能和高效。
+
+## 总结
+
+生成式AI是人工智能的重要分支，理解其基本原理有助于更好地使用相关工具。`
+            },
+            {
+                id: 5,
+                title: 'AI自动化开发：如何用AI提升编程效率10倍',
+                category: '技术教程',
+                date: '2024-12-03',
+                author: '技术团队',
+                tags: ['AI编程', '自动化', '效率提升', '开发工具'],
+                excerpt: '介绍如何使用AI工具提升编程效率，包括代码生成、自动测试、智能调试等实用技巧，帮助开发者节省大量时间。',
+                content: `# AI自动化开发：如何用AI提升编程效率10倍
+
+## 为什么需要AI辅助开发？
+
+传统开发流程中，开发者需要花费大量时间在：
+
+- 编写重复代码
+- 调试错误
+- 编写测试用例
+- 文档编写
+
+AI工具可以显著提升这些环节的效率。
+
+## 实用工具推荐
+
+### 1. GitHub Copilot
+
+GitHub Copilot是GitHub推出的AI编程助手，支持多种编程语言。
+
+\`\`\`python
+# 输入注释，Copilot会自动生成代码
+def calculate_fibonacci(n):
+    # 计算斐波那契数列的第n项
+    if n <= 1:
+        return n
+    return calculate_fibonacci(n-1) + calculate_fibonacci(n-2)
+\`\`\`
+
+### 2. Cursor编辑器
+
+Cursor是基于AI的代码编辑器，提供智能代码补全和重构功能。
+
+## 最佳实践
+
+1. **明确描述需求**：在注释中清晰描述想要的功能
+2. **迭代优化**：根据生成结果不断优化提示
+3. **代码审查**：AI生成的代码需要人工审查
+
+## 效率提升对比
+
+| 任务 | 传统方式 | AI辅助 | 提升 |
+|------|---------|--------|------|
+| 编写函数 | 30分钟 | 5分钟 | 6倍 |
+| 调试错误 | 1小时 | 10分钟 | 6倍 |
+| 编写测试 | 45分钟 | 8分钟 | 5.6倍 |
+
+## 注意事项
+
+> ⚠️ **重要提示**：AI生成的代码需要仔细审查，确保安全性和正确性。
+
+## 总结
+
+AI辅助开发正在成为趋势，合理使用可以大幅提升开发效率。`
+            },
+            {
+                id: 6,
+                title: '2024年AI行业发展趋势报告',
+                category: '行业动态',
+                date: '2024-12-15',
+                author: '市场团队',
+                tags: ['行业报告', 'AI趋势', '市场分析', '2024'],
+                excerpt: '深度分析2024年AI行业的发展趋势，包括技术突破、市场变化、投资热点等，为企业和开发者提供参考。',
+                content: `# 2024年AI行业发展趋势报告
+
+## 执行摘要
+
+2024年是AI行业快速发展的一年，多项技术取得突破，应用场景不断拓展。
+
+## 主要趋势
+
+### 1. 大模型持续进化
+
+- GPT-4等模型能力不断提升
+- 开源模型快速发展
+- 多模态能力增强
+
+### 2. AI Agent成为热点
+
+AI智能体应用快速增长，成为新的投资热点。
+
+### 3. 行业应用深化
+
+AI在各行业的应用不断深化，从概念验证走向规模化应用。
+
+## 市场规模
+
+| 领域 | 2023年 | 2024年 | 增长率 |
+|------|--------|--------|--------|
+| 大模型 | 100亿 | 300亿 | 200% |
+| AI应用 | 500亿 | 1200亿 | 140% |
+| AI工具 | 50亿 | 150亿 | 200% |
+
+## 投资热点
+
+1. **AI基础设施**：算力、数据、平台
+2. **垂直应用**：金融、医疗、教育
+3. **开发工具**：低代码、自动化
+
+## 挑战与机遇
+
+### 挑战
+
+- 算力成本高
+- 数据质量要求
+- 监管政策变化
+
+### 机遇
+
+- 技术成熟度提升
+- 应用场景拓展
+- 成本持续下降
+
+## 总结
+
+2024年AI行业继续保持高速发展，技术创新和应用落地并重，为未来发展奠定基础。`
+            },
+            {
+                id: 7,
+                title: 'AI全网营销实战：如何用AI提升营销转化率',
+                category: '技术教程',
+                date: '2024-12-01',
+                author: '营销团队',
+                tags: ['AI营销', '数字营销', '转化率优化', '实战案例'],
+                excerpt: '分享AI在全网营销中的实际应用案例，包括内容创作、用户画像、精准投放等，帮助营销人员提升工作效率和转化率。',
+                content: `# AI全网营销实战：如何用AI提升营销转化率
+
+## AI在营销中的应用
+
+AI技术正在改变传统营销方式，从内容创作到用户分析，各个环节都可以应用AI。
+
+## 核心应用场景
+
+### 1. 智能内容创作
+
+使用AI生成营销文案、图片、视频等内容。
+
+\`\`\`python
+# 示例：使用AI生成营销文案
+def generate_marketing_copy(product, target_audience):
+    prompt = f"为{product}写一段面向{target_audience}的营销文案"
+    # 调用AI API生成内容
+    return ai_api.generate(prompt)
+\`\`\`
+
+### 2. 用户画像分析
+
+通过AI分析用户行为，构建精准用户画像。
+
+### 3. 智能投放优化
+
+AI自动优化广告投放策略，提升ROI。
+
+## 实战案例
+
+### 案例1：电商营销
+
+- **目标**：提升转化率
+- **方法**：AI个性化推荐
+- **结果**：转化率提升45%
+
+### 案例2：内容营销
+
+- **目标**：提升内容质量
+- **方法**：AI辅助创作
+- **结果**：内容产出效率提升3倍
+
+## 效果对比
+
+| 指标 | 传统方式 | AI辅助 | 提升 |
+|------|---------|--------|------|
+| 内容产出 | 10篇/天 | 30篇/天 | 200% |
+| 转化率 | 2.5% | 3.6% | 44% |
+| ROI | 1:3 | 1:5 | 67% |
+
+## 最佳实践
+
+1. **数据驱动**：基于数据做决策
+2. **持续优化**：不断测试和改进
+3. **个性化**：针对不同用户群体定制策略
+
+## 总结
+
+AI营销工具可以显著提升营销效率和效果，值得深入学习和应用。`
+            },
+            {
+                id: 8,
+                title: '深度学习入门：神经网络基础详解',
+                category: '科普文章',
+                date: '2024-11-28',
+                author: '技术团队',
+                tags: ['深度学习', '神经网络', '入门教程', '机器学习'],
+                excerpt: '零基础入门深度学习的完整指南，从神经元到神经网络，从反向传播到梯度下降，用通俗易懂的方式解释核心概念。',
+                content: `# 深度学习入门：神经网络基础详解
+
+## 什么是神经网络？
+
+神经网络是模拟人脑神经元工作方式的数学模型，是深度学习的基础。
+
+## 神经元模型
+
+一个简单的神经元可以表示为：
+
+\`\`\`python
+import numpy as np
+
+def neuron(inputs, weights, bias):
+    # 计算加权和
+    output = np.dot(inputs, weights) + bias
+    # 激活函数
+    return sigmoid(output)
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+\`\`\`
+
+## 网络结构
+
+### 前馈神经网络
+
+最简单的神经网络结构：
+
+1. **输入层**：接收数据
+2. **隐藏层**：处理数据
+3. **输出层**：产生结果
+
+## 训练过程
+
+### 1. 前向传播
+
+数据从输入层流向输出层。
+
+### 2. 计算损失
+
+比较预测结果和真实值。
+
+### 3. 反向传播
+
+根据损失调整权重。
+
+## 常见激活函数
+
+| 函数 | 公式 | 特点 |
+|------|------|------|
+| Sigmoid | 1/(1+e^(-x)) | 平滑，输出0-1 |
+| ReLU | max(0,x) | 简单，常用 |
+| Tanh | (e^x-e^(-x))/(e^x+e^(-x)) | 输出-1到1 |
+
+## 学习资源
+
+> 💡 **学习建议**：从简单的感知机开始，逐步学习更复杂的网络结构。
+
+## 总结
+
+神经网络是深度学习的核心，理解其基本原理是学习AI的重要基础。`
+            },
+            {
+                id: 9,
+                title: 'AI产品更新：全新智能体开发平台正式上线',
+                category: '产品更新',
+                date: '2024-12-13',
+                author: '产品团队',
+                tags: ['产品更新', '智能体平台', '新功能', '发布'],
+                excerpt: '介绍全新上线的AI智能体开发平台，包括核心功能、使用教程、定价方案等，帮助用户快速了解和使用新平台。',
+                content: `# AI产品更新：全新智能体开发平台正式上线
+
+## 产品概述
+
+我们很高兴地宣布，全新的AI智能体开发平台正式上线！这个平台旨在帮助开发者快速构建和部署AI智能体应用。
+
+## 核心功能
+
+### 1. 可视化开发
+
+- 拖拽式界面设计
+- 无需编写代码即可创建智能体
+- 丰富的模板库
+
+### 2. 多模型支持
+
+支持多种主流AI模型：
+
+| 模型 | 用途 | 状态 |
+|------|------|------|
+| GPT-4 | 通用对话 | ✅ |
+| Claude | 长文本处理 | ✅ |
+| Gemini | 多模态 | ✅ |
+
+### 3. 一键部署
+
+- 云端部署
+- 私有化部署
+- API接口生成
+
+## 使用示例
+
+\`\`\`python
+from agent_platform import AgentBuilder
+
+# 创建智能体
+agent = AgentBuilder()
+agent.set_name("客服助手")
+agent.add_tool("查询订单")
+agent.add_tool("处理退款")
+
+# 部署
+agent.deploy()
+\`\`\`
+
+## 定价方案
+
+| 方案 | 价格 | 功能 |
+|------|------|------|
+| 免费版 | 0元 | 基础功能 |
+| 专业版 | 299元/月 | 完整功能 |
+| 企业版 | 定制 | 私有化部署 |
+
+## 快速开始
+
+1. 注册账号
+2. 选择模板
+3. 配置参数
+4. 部署上线
+
+## 总结
+
+新平台让AI智能体开发变得更加简单高效，欢迎体验！`
+            },
+            {
+                id: 10,
+                title: 'AI安全与隐私保护：企业级最佳实践',
+                category: '技术教程',
+                date: '2024-11-25',
+                author: '安全团队',
+                tags: ['AI安全', '隐私保护', '企业安全', '最佳实践'],
+                excerpt: '深入探讨AI应用中的安全和隐私问题，提供企业级的安全防护方案和最佳实践，帮助企业在使用AI时保护数据安全。',
+                content: `# AI安全与隐私保护：企业级最佳实践
+
+## 安全挑战
+
+AI应用面临多种安全挑战：
+
+1. **数据泄露**：训练数据可能包含敏感信息
+2. **模型攻击**：对抗样本攻击
+3. **隐私泄露**：用户数据保护
+
+## 防护策略
+
+### 1. 数据加密
+
+所有数据在传输和存储时都应加密。
+
+\`\`\`python
+from cryptography.fernet import Fernet
+
+# 生成密钥
+key = Fernet.generate_key()
+cipher = Fernet(key)
+
+# 加密数据
+encrypted_data = cipher.encrypt(b"sensitive data")
+\`\`\`
+
+### 2. 访问控制
+
+实施严格的访问控制策略：
+
+- 身份认证
+- 权限管理
+- 审计日志
+
+### 3. 隐私计算
+
+使用联邦学习、差分隐私等技术保护隐私。
+
+## 合规要求
+
+| 法规 | 要求 | 状态 |
+|------|------|------|
+| GDPR | 数据保护 | ✅ |
+| 等保三级 | 安全等级 | ✅ |
+| ISO 27001 | 信息安全管理 | ✅ |
+
+## 最佳实践
+
+1. **数据最小化**：只收集必要的数据
+2. **定期审计**：检查安全措施
+3. **员工培训**：提高安全意识
+
+> ⚠️ **重要**：安全是一个持续的过程，需要不断改进。
+
+## 总结
+
+AI安全和隐私保护是企业应用AI时必须重视的问题，需要从技术和管理两个层面进行防护。`
+            },
+            {
+                id: 11,
+                title: '边缘计算与AI：让AI在边缘设备上运行',
+                category: '科普文章',
+                date: '2024-11-22',
+                author: '技术团队',
+                tags: ['边缘计算', 'AI推理', 'IoT', '技术科普'],
+                excerpt: '介绍边缘计算在AI应用中的重要性，解释如何在资源受限的边缘设备上部署AI模型，包括模型压缩、量化等技术。',
+                content: `# 边缘计算与AI：让AI在边缘设备上运行
+
+## 什么是边缘计算？
+
+边缘计算是将计算能力部署到数据源附近，减少数据传输延迟。
+
+## 为什么需要边缘AI？
+
+### 优势
+
+1. **低延迟**：本地处理，响应快
+2. **隐私保护**：数据不上传云端
+3. **降低成本**：减少带宽和计算成本
+
+## 技术挑战
+
+在边缘设备上运行AI模型面临：
+
+- 计算资源有限
+- 内存容量小
+- 功耗要求高
+
+## 解决方案
+
+### 1. 模型压缩
+
+\`\`\`python
+# 模型量化示例
+import torch
+import torch.quantization as quantization
+
+# 加载模型
+model = load_model()
+
+# 量化
+quantized_model = quantization.quantize_dynamic(
+    model, {torch.nn.Linear}, dtype=torch.qint8
+)
+\`\`\`
+
+### 2. 模型剪枝
+
+移除不重要的神经元和连接。
+
+### 3. 知识蒸馏
+
+用大模型训练小模型。
+
+## 应用场景
+
+| 场景 | 设备 | 模型大小 |
+|------|------|----------|
+| 智能摄像头 | 摄像头 | <10MB |
+| 智能音箱 | 音箱 | <50MB |
+| 手机应用 | 手机 | <100MB |
+
+## 未来展望
+
+边缘AI将成为重要趋势，随着硬件性能提升，更多AI应用将在边缘运行。
+
+## 总结
+
+边缘计算让AI更贴近用户，是AI应用的重要发展方向。`
+            },
+            {
+                id: 12,
+                title: '2024年AI技术突破盘点：这些创新改变了行业',
+                category: '行业动态',
+                date: '2024-12-18',
+                author: '技术团队',
+                tags: ['技术突破', 'AI创新', '年度盘点', '2024'],
+                excerpt: '盘点2024年AI领域的重要技术突破和创新，包括新模型发布、算法改进、应用创新等，回顾这一年的技术发展。',
+                content: `# 2024年AI技术突破盘点：这些创新改变了行业
+
+## 重大技术突破
+
+2024年AI领域取得了多项重要突破，这些创新正在改变整个行业。
+
+## 1. 多模态大模型
+
+### GPT-4V和Gemini
+
+多模态能力大幅提升，可以同时处理文本、图像、音频。
+
+**影响**：
+- 应用场景更丰富
+- 用户体验更好
+- 开发效率提升
+
+## 2. AI Agent框架
+
+### LangChain、AutoGPT
+
+AI智能体框架快速发展，让AI能够自主完成任务。
+
+## 3. 模型压缩技术
+
+### 量化、剪枝、蒸馏
+
+让大模型能在普通设备上运行。
+
+## 技术对比
+
+| 技术 | 2023年 | 2024年 | 改进 |
+|------|--------|--------|------|
+| 模型参数量 | 1T | 10T+ | 10倍 |
+| 推理速度 | 1x | 5x | 5倍 |
+| 模型大小 | 100GB | 20GB | 5倍压缩 |
+
+## 行业影响
+
+### 软件开发
+
+- 代码生成能力提升
+- 开发效率大幅提高
+
+### 内容创作
+
+- 内容质量提升
+- 创作成本降低
+
+### 科学研究
+
+- 加速科学发现
+- 辅助研究分析
+
+## 未来展望
+
+2025年，我们期待看到：
+
+1. 更强的推理能力
+2. 更低的部署成本
+3. 更广泛的应用场景
+
+## 总结
+
+2024年是AI技术快速发展的一年，这些突破为未来的应用奠定了坚实基础。`
+            },
+            {
+                id: 13,
+                title: '产品更新：AI自动化开发工具新增代码审查功能',
+                category: '产品更新',
+                date: '2024-12-06',
+                author: '产品团队',
+                tags: ['产品更新', '代码审查', '开发工具', '新功能'],
+                excerpt: '介绍AI自动化开发工具的最新更新，新增智能代码审查功能，可以自动检测代码问题、提供优化建议，提升代码质量。',
+                content: `# 产品更新：AI自动化开发工具新增代码审查功能
+
+## 更新内容
+
+我们为AI自动化开发工具新增了智能代码审查功能，帮助开发者提升代码质量。
+
+## 新功能特性
+
+### 1. 自动问题检测
+
+- 代码规范检查
+- 潜在bug识别
+- 性能问题分析
+
+### 2. 智能优化建议
+
+AI会提供具体的优化建议：
+
+\`\`\`python
+# 示例：优化前
+def process_data(data):
+    result = []
+    for item in data:
+        if item > 0:
+            result.append(item * 2)
+    return result
+
+# AI建议：使用列表推导式
+def process_data(data):
+    return [item * 2 for item in data if item > 0]
+\`\`\`
+
+### 3. 安全漏洞检测
+
+自动检测常见安全漏洞：
+
+| 漏洞类型 | 检测能力 | 状态 |
+|---------|---------|------|
+| SQL注入 | ✅ | 已支持 |
+| XSS攻击 | ✅ | 已支持 |
+| 敏感信息泄露 | ✅ | 已支持 |
+
+## 使用方式
+
+1. 上传代码文件
+2. 选择审查规则
+3. 查看审查报告
+4. 应用优化建议
+
+## 效果对比
+
+| 指标 | 人工审查 | AI审查 | 提升 |
+|------|---------|--------|------|
+| 审查时间 | 2小时 | 5分钟 | 24倍 |
+| 问题发现率 | 80% | 95% | +15% |
+| 成本 | 高 | 低 | 显著降低 |
+
+## 总结
+
+新功能让代码审查更加高效，欢迎体验！`
+            },
+            {
+                id: 14,
+                title: 'AI在医疗健康领域的应用与挑战',
+                category: '科普文章',
+                date: '2024-11-20',
+                author: '行业专家',
+                tags: ['AI医疗', '健康科技', '应用案例', '行业分析'],
+                excerpt: '探讨AI在医疗健康领域的应用现状，包括医学影像分析、药物研发、疾病诊断等，以及面临的挑战和未来展望。',
+                content: `# AI在医疗健康领域的应用与挑战
+
+## 应用场景
+
+AI在医疗健康领域有广泛的应用：
+
+### 1. 医学影像分析
+
+AI可以辅助医生分析X光片、CT扫描等医学影像。
+
+**优势**：
+- 提高诊断准确率
+- 缩短诊断时间
+- 减少漏诊率
+
+### 2. 药物研发
+
+AI加速新药研发过程：
+
+| 阶段 | 传统方式 | AI辅助 | 时间缩短 |
+|------|---------|--------|----------|
+| 靶点发现 | 2-3年 | 6-12个月 | 75% |
+| 化合物筛选 | 1-2年 | 3-6个月 | 75% |
+
+### 3. 疾病诊断
+
+AI辅助诊断系统帮助医生做出更准确的诊断。
+
+## 面临的挑战
+
+### 1. 数据质量
+
+医疗数据质量要求高，需要大量高质量标注数据。
+
+### 2. 监管要求
+
+医疗AI应用需要严格的监管审批。
+
+### 3. 伦理问题
+
+AI诊断的责任归属、隐私保护等伦理问题。
+
+## 成功案例
+
+### 案例1：皮肤癌检测
+
+- **准确率**：95%+
+- **应用**：辅助医生诊断
+- **效果**：早期发现率提升30%
+
+### 案例2：糖尿病视网膜病变
+
+- **准确率**：90%+
+- **应用**：筛查工具
+- **效果**：筛查效率提升10倍
+
+## 未来展望
+
+> 💡 **展望**：随着技术发展，AI将在医疗健康领域发挥更大作用。
+
+## 总结
+
+AI在医疗健康领域有巨大潜力，但也面临挑战，需要技术、监管、伦理等多方面协同发展。`
+            }
+        ];
+
         let currentPage = 1;
         const toolsPerPage = 9;
         let filteredTools = [...toolsData];
@@ -2654,10 +4463,13 @@
             });
 
             // 显示目标页面
-            document.getElementById(pageId + '-page').classList.add('active');
+            const targetPage = document.getElementById(pageId + '-page');
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
 
-            // 更新导航栏激活状态
-            document.querySelectorAll('.nav-links a').forEach(link => {
+            // 更新导航栏激活状态（桌面端和移动端）
+            document.querySelectorAll('.nav-links a, .mobile-menu-links a').forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('data-page') === pageId) {
                     link.classList.add('active');
@@ -2670,6 +4482,11 @@
             // 如果是工具页，初始化工具列表
             if (pageId === 'tools') {
                 renderTools();
+            }
+            
+            // 如果是博客页，初始化博客列表
+            if (pageId === 'blog') {
+                initBlog();
             }
         }
 
@@ -2821,6 +4638,283 @@
             submitBtn.textContent = '提交中...';
             
             // 表单会正常提交，不需要阻止默认行为
+        });
+
+        // ========== 博客功能 ==========
+        let blogCurrentPage = 1;
+        const blogPerPage = 9;
+        let filteredBlogs = [...blogArticles];
+        let currentCategory = 'all';
+        let currentSearchTerm = '';
+
+        // 初始化博客
+        function initBlog() {
+            filteredBlogs = [...blogArticles];
+            blogCurrentPage = 1;
+            renderBlogs();
+            setupBlogSearch();
+        }
+
+        // 渲染博客列表
+        function renderBlogs() {
+            const blogGrid = document.getElementById('blogGrid');
+            const startIndex = (blogCurrentPage - 1) * blogPerPage;
+            const endIndex = startIndex + blogPerPage;
+            const currentBlogs = filteredBlogs.slice(startIndex, endIndex);
+
+            if (currentBlogs.length === 0) {
+                blogGrid.innerHTML = '<div style="text-align: center; padding: 60px; color: #6E6E73;">暂无文章</div>';
+                document.getElementById('blogPagination').innerHTML = '';
+                return;
+            }
+
+            blogGrid.innerHTML = currentBlogs.map(blog => `
+                <div class="blog-card" onclick="showBlogDetail(${blog.id})">
+                    <div class="blog-card-header">
+                        <span class="blog-category">${blog.category}</span>
+                        <h3 class="blog-card-title">${blog.title}</h3>
+                        <p class="blog-card-excerpt">${blog.excerpt}</p>
+                    </div>
+                    <div class="blog-card-footer">
+                        <span class="blog-card-date">${blog.date}</span>
+                        <div class="blog-card-tags">
+                            ${blog.tags.slice(0, 3).map(tag => `<span class="blog-tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            renderBlogPagination();
+        }
+
+        // 渲染博客分页
+        function renderBlogPagination() {
+            const totalPages = Math.ceil(filteredBlogs.length / blogPerPage);
+            const pagination = document.getElementById('blogPagination');
+
+            if (totalPages <= 1) {
+                pagination.innerHTML = '';
+                return;
+            }
+
+            let paginationHTML = '';
+
+            // 上一页
+            if (blogCurrentPage > 1) {
+                paginationHTML += `<button class="page-btn" onclick="changeBlogPage(${blogCurrentPage - 1})">上一页</button>`;
+            }
+
+            // 页码
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === 1 || i === totalPages || (i >= blogCurrentPage - 1 && i <= blogCurrentPage + 1)) {
+                    paginationHTML += `<button class="page-btn ${i === blogCurrentPage ? 'active' : ''}" onclick="changeBlogPage(${i})">${i}</button>`;
+                } else if (i === blogCurrentPage - 2 || i === blogCurrentPage + 2) {
+                    paginationHTML += `<span style="padding: 10px;">...</span>`;
+                }
+            }
+
+            // 下一页
+            if (blogCurrentPage < totalPages) {
+                paginationHTML += `<button class="page-btn" onclick="changeBlogPage(${blogCurrentPage + 1})">下一页</button>`;
+            }
+
+            pagination.innerHTML = paginationHTML;
+        }
+
+        // 切换博客页码
+        function changeBlogPage(page) {
+            blogCurrentPage = page;
+            renderBlogs();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 分类筛选
+        function filterByCategory(category) {
+            currentCategory = category;
+            
+            // 更新按钮状态
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-category') === category) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // 筛选文章
+            applyBlogFilters();
+        }
+
+        // 应用筛选
+        function applyBlogFilters() {
+            filteredBlogs = blogArticles.filter(blog => {
+                // 分类筛选
+                const categoryMatch = currentCategory === 'all' || blog.category === currentCategory;
+                
+                // 搜索筛选
+                const searchMatch = !currentSearchTerm || 
+                    blog.title.toLowerCase().includes(currentSearchTerm) ||
+                    blog.excerpt.toLowerCase().includes(currentSearchTerm) ||
+                    blog.content.toLowerCase().includes(currentSearchTerm) ||
+                    blog.tags.some(tag => tag.toLowerCase().includes(currentSearchTerm));
+                
+                return categoryMatch && searchMatch;
+            });
+
+            blogCurrentPage = 1;
+            renderBlogs();
+        }
+
+        // 设置搜索功能
+        function setupBlogSearch() {
+            const searchInput = document.getElementById('blogSearch');
+            if (searchInput) {
+                searchInput.addEventListener('input', function(e) {
+                    currentSearchTerm = e.target.value.toLowerCase();
+                    applyBlogFilters();
+                });
+            }
+        }
+
+        // 显示博客详情
+        function showBlogDetail(blogId) {
+            const blog = blogArticles.find(b => b.id === blogId);
+            if (!blog) return;
+
+            // 切换到详情页（注意：页面ID是 blog-detail-page，但 showPage 会自动添加 -page）
+            showPage('blog-detail');
+
+            // 添加 Article 结构化数据
+            const existingSchema = document.getElementById('article-schema');
+            if (existingSchema) {
+                existingSchema.remove();
+            }
+            
+            const articleSchema = {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": blog.title,
+                "description": blog.excerpt,
+                "image": "https://rayso.ai/blog/" + blogId + ".jpg",
+                "datePublished": blog.date,
+                "dateModified": blog.date,
+                "author": {
+                    "@type": "Organization",
+                    "name": blog.author,
+                    "url": "https://rayso.ai"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "瑞幻智能科技有限公司",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://rayso.ai/logo.png"
+                    }
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://rayso.ai/blog/" + blogId
+                },
+                "articleSection": blog.category,
+                "keywords": blog.tags.join(", ")
+            };
+            
+            const schemaScript = document.createElement('script');
+            schemaScript.type = 'application/ld+json';
+            schemaScript.id = 'article-schema';
+            schemaScript.textContent = JSON.stringify(articleSchema);
+            document.head.appendChild(schemaScript);
+
+            // 更新页面 title 和 meta description
+            document.title = blog.title + ' - 瑞幻智能 | RaySo.AI';
+            let metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.content = blog.excerpt;
+            } else {
+                metaDescription = document.createElement('meta');
+                metaDescription.name = 'description';
+                metaDescription.content = blog.excerpt;
+                document.head.appendChild(metaDescription);
+            }
+            
+            // 更新面包屑导航
+            const breadcrumbScript = document.getElementById('blog-detail-breadcrumb');
+            if (breadcrumbScript) {
+                const breadcrumb = {
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "首页",
+                            "item": "https://rayso.ai/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "博客/教程",
+                            "item": "https://rayso.ai/blog"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": blog.title,
+                            "item": "https://rayso.ai/blog/" + blogId
+                        }
+                    ]
+                };
+                breadcrumbScript.textContent = JSON.stringify(breadcrumb);
+            }
+
+            // 渲染文章内容
+            const articleContainer = document.getElementById('blogArticle');
+            
+            // 使用 marked 解析 Markdown
+            const htmlContent = marked.parse(blog.content);
+            
+            articleContainer.innerHTML = `
+                <div class="article-header">
+                    <span class="article-category">${blog.category}</span>
+                    <h1 class="article-title">${blog.title}</h1>
+                    <div class="article-meta">
+                        <span>📅 ${blog.date}</span>
+                        <span>✍️ ${blog.author}</span>
+                    </div>
+                    <div class="article-tags">
+                        ${blog.tags.map(tag => `<span class="article-tag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+                <div class="article-content">
+                    ${htmlContent}
+                </div>
+            `;
+
+            // 高亮代码
+            articleContainer.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+        }
+
+        // 切换移动端菜单
+        function toggleMobileMenu() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // 点击菜单外部关闭菜单
+        document.addEventListener('click', function(event) {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const navbar = document.getElementById('navbar');
+            
+            // 如果点击的不是导航栏区域，关闭菜单
+            if (!navbar.contains(event.target) && mobileMenu.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
         });
 
         // 导航栏滚动效果

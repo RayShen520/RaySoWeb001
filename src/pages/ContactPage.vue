@@ -1,7 +1,8 @@
 <template>
   <div class="contact-page">
+    <main>
     <section class="contact-section">
-      <h2 class="section-title">联系我们</h2>
+      <h1 class="section-title">瑞幻智能 - 联系我们</h1>
       <div class="contact-container">
         <div class="contact-layout">
           <!-- 左侧：联系信息卡片 -->
@@ -9,17 +10,17 @@
             <div class="info-card">
               <div class="info-icon">📧</div>
               <h3>邮箱联系</h3>
-              <p>contact@rayso.ai</p>
+              <p>zzrayhuan@163.com</p>
             </div>
             <div class="info-card">
               <div class="info-icon">📱</div>
               <h3>微信咨询</h3>
-              <p>扫描二维码或填写表单</p>
+              <p>rayhuan520</p>
             </div>
             <div class="info-card">
               <div class="info-icon">📍</div>
               <h3>公司地址</h3>
-              <p>福建省漳州市高新区</p>
+              <p>厦门 | 漳州 | 深圳 | 苏州 | 香港 | 新加坡 | 马来西亚</p>
             </div>
             <div class="info-card">
               <div class="info-icon">⏰</div>
@@ -45,7 +46,7 @@
               </p>
               <div class="form-header">
                 <h3>填写咨询表单</h3>
-                <p>我们会在收到您的咨询后尽快与您联系</p>
+                <p>瑞幻智能会在收到您的咨询后尽快与您联系</p>
               </div>
               <div class="form-group">
                 <label for="wechat">
@@ -98,14 +99,46 @@
         </div>
       </div>
     </section>
+    </main>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { inject } from 'vue'
 
 const showToast = inject('showToast')
+
+// 添加面包屑导航结构化数据
+onMounted(() => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://rayso.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "联系我们",
+        "item": "https://rayso.ai/contact"
+      }
+    ]
+  }
+  
+  let existingSchema = document.getElementById('contact-breadcrumb-schema')
+  if (!existingSchema) {
+    const schemaScript = document.createElement('script')
+    schemaScript.type = 'application/ld+json'
+    schemaScript.id = 'contact-breadcrumb-schema'
+    schemaScript.textContent = JSON.stringify(breadcrumbSchema)
+    document.head.appendChild(schemaScript)
+  }
+})
 
 const form = ref({
   wechat: '',

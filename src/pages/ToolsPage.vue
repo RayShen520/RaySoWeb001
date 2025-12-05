@@ -1,8 +1,9 @@
 <template>
   <div class="tools-page">
+    <main>
     <section class="tools-section">
       <div class="tools-header">
-        <h2 class="section-title">AI工具合集</h2>
+        <h1 class="section-title">瑞幻智能 - AI工具合集</h1>
         <div class="search-box">
           <input 
             type="text" 
@@ -75,13 +76,45 @@
         </button>
       </div>
     </section>
+    </main>
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { inject } from 'vue'
 import { toolsData } from '../data/tools.js'
+
+// 添加面包屑导航结构化数据
+onMounted(() => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://rayso.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "AI工具合集",
+        "item": "https://rayso.ai/tools"
+      }
+    ]
+  }
+  
+  let existingSchema = document.getElementById('tools-breadcrumb-schema')
+  if (!existingSchema) {
+    const schemaScript = document.createElement('script')
+    schemaScript.type = 'application/ld+json'
+    schemaScript.id = 'tools-breadcrumb-schema'
+    schemaScript.textContent = JSON.stringify(breadcrumbSchema)
+    document.head.appendChild(schemaScript)
+  }
+})
 
 const showToast = inject('showToast')
 const navigate = inject('navigate')
